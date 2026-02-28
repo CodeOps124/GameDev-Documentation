@@ -1,0 +1,2003 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
+    
+    
+      
+        <title>GAME DEV WORKSHOP DOCS</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#game-development-101-acm-workshop" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="." title="GAME DEV WORKSHOP DOCS" class="md-header__button md-logo" aria-label="GAME DEV WORKSHOP DOCS" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            GAME DEV WORKSHOP DOCS
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Home
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="GAME DEV WORKSHOP DOCS" class="md-nav__button md-logo" aria-label="GAME DEV WORKSHOP DOCS" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    GAME DEV WORKSHOP DOCS
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="." class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="game-development-101-acm-workshop">Game Development 101- ACM Workshop</h1>
+<h1 id="1-overview">1. Overview</h1>
+<p>Unity is a cross-platform game engine used to develop 2D, 3D, AR, and VR applications . It abstracts low-level systems (rendering, physics, memory, input) and provides a component-based framework for building interactive applications using C#.</p>
+<h2 id="11-what-you-will-be-learning">1.1 What you will be learning ?</h2>
+<p>By the end of this workshop. You would have learnt to create a 2D roguelike game. A roguelike is a traditional game genre that has taken many forms over the years, but it usually shares some common elements, such as the following:</p>
+<ul>
+<li>It’s procedurally generated, meaning the levels in the game aren't created by a human and thus always the same, but instead they’re assembled randomly by the code, so every time the game is played, the levels are different.</li>
+<li>The game is played on a grid, meaning all entities (player and enemies) move from cell to cell on that grid.</li>
+<li>The game is turn-based, meaning nothing will happen until the player takes an action (move, attack, etc.), which gives players the chance to think strategically between each action.</li>
+</ul>
+<p>In this tutorial, you’ll start by creating the Unity project for this game. You’ll then import the assets that will be used throughout the tutorial, set up all the settings for rendering, and set up Unity Version Control. Lastly, before you start creating, you’ll organize ideas about the game to create a plan on how to make it.</p>
+<h2 id="12-preparing-for-the-project">1.2 Preparing for the project</h2>
+<p>To create your project and get it ready to work on, follow these instructions:</p>
+<p><strong>1.</strong> Open the Unity Hub and install Unity 6.</p>
+<p><strong>2.</strong> Create a new project using Editor version 6.000 LTS, name it “Roguelike”, and select the <strong>Universal 2D</strong> template.</p>
+<p><strong>3.</strong> Enable <strong>Connect to Unity Cloud</strong> and <strong>Use Unity Version Control</strong>.</p>
+<p><img alt="Image" src="images/Screenshot_2026-02-27_193028.png" /></p>
+<p>This will allow you to use Unity Cloud and Unity Version Control in your project.</p>
+<p><strong>4.</strong> Select <strong>Create project</strong>.</p>
+<ul>
+<li>Once your new Roguelike project is open in Unity, you need to change some default settings for this project.</li>
+</ul>
+<p><strong>5.</strong> In the <strong>Project</strong> window, select <strong>Assets</strong> &gt; <strong>Settings</strong>, then select the <strong>Renderer2D</strong> file.</p>
+<ul>
+<li>This is all the settings used by the rendering pipeline to display your assets in the game.</li>
+</ul>
+<p><strong>6.</strong> In the <strong>Inspector</strong> window, under the <strong>General</strong> section, change the <strong>Default Material Type</strong> from <strong>Lit</strong> to <strong>Unlit</strong>.</p>
+<ul>
+<li>Lit materials are affected by dynamic lighting, where lights can move and be switched on and off for a more realistic look. But Lit materials require additional computation in order to be rendered. As this project uses a traditional pixel art style, where lighting is drawn directly on the sprite, dynamic lighting isn't needed, so Unlit materials should be used, because they are easier and faster to render.</li>
+<li>Now every time a new sprite is created, it will be assigned an Unlit material automatically instead of a Lit one.</li>
+</ul>
+<p>Your project is now set up for you to start working on it.</p>
+<h2 id="13-importing-assets">1.3 Importing Assets</h2>
+<ul>
+<li>Download <a href="https://unity-connect-prd.storage.googleapis.com/20241025/13b51e19-dc52-4982-b67a-fdfb35c7a3b8/Roguelike2DTutorialAssets.unitypackege.zip">the asset package</a>, unzip the file and drag and drop it into the <strong>Assets</strong> folder of the <strong>Project</strong> window.</li>
+<li>The <strong>Import Unity Package</strong> window will open, listing all the assets this package will import into your project.</li>
+</ul>
+<p><img alt="Image" src="images/8e5bd774-272a-4041-91ba-4b25cbb85f95_roguelike-assets.png" /></p>
+<h1 id="2-creating-the-game">2. Creating the game</h1>
+<p>Now you’ll start working on the game itself. The first thing you’ll need to do is generate a game board through code.</p>
+<h2 id="21-creating-the-game-board">2.1 Creating the game board</h2>
+<ol>
+<li>The provided project should already contain a <strong>Scenes</strong> folder, but if it doesn’t, in the <strong>Project</strong> window, right-click the <strong>Assets</strong> folder and select <strong>Create</strong> &gt; <strong>Folder</strong> and name it “Scenes”.</li>
+<li>Right-click the <strong>Scenes</strong> folder and select <strong>Create</strong> &gt; <strong>Scene</strong> &gt; <strong>Scene</strong> to create a new empty scene, and name it “Main”.</li>
+<li>Double click <strong>Main</strong> scene to open it. In the <strong>Hierarchy</strong> window, select the <strong>Main</strong> <strong>Camera</strong> GameObject, then in the <strong>Inspector</strong> window, under the <strong>Camera</strong> section, ensure that the <strong>Projection</strong> property is set to <strong>Orthographic</strong> and the <strong>Size</strong> property is set to <strong>5</strong>.</li>
+</ol>
+<p><img alt="Image" src="images/25f6895b-e1f9-4b30-b305-f1122aacf250_camera-orthograpic.png" /></p>
+<ol>
+<li>Under the <strong>Environment</strong> section of the <strong>Camera</strong> settings, ensure the <strong>Background Type</strong> property is set to <strong>Solid Color</strong> and set the <strong>Background Color</strong> property to black (<strong>000000</strong>).</li>
+</ol>
+<p><img alt="Image" src="images/de7de6a8-8858-4876-8852-ebe253c70e28_camera-background-black.png" /></p>
+<ol>
+<li>Right-click in the <strong>Hierarchy</strong> window and select <strong>2D Object</strong> &gt; <strong>Tilemap</strong> &gt; <strong>Rectangular</strong>.</li>
+<li>In the <strong>Project</strong> window, right-click the <strong>Assets</strong> folder and select <strong>Create</strong> &gt; <strong>Folder</strong> to create a new folder, then name it “Tiles”. Right-click the <strong>Tiles</strong> folder and select <strong>Create</strong> &gt; <strong>2D</strong> &gt; <strong>Tile Palette</strong> &gt; <strong>Rectangular</strong> and name the new asset “GamePalette”.</li>
+<li>
+<p>From the main menu, select <strong>Window</strong> &gt; <strong>2D</strong> &gt; <strong>Tile Palette</strong>.</p>
+<p>This opens the <strong>Tile Palette</strong> window.</p>
+</li>
+</ol>
+<p><img alt="Image" src="images/d0affab1-15b8-4efa-8834-1f4296a1a0b3_tile-palette-window.png" /></p>
+<ol>
+<li>In the <strong>Project</strong> window, select <strong>Assets</strong> &gt; <strong>Roguelike2D</strong> &gt; <strong>TutorialAssets</strong> &gt; <strong>Sprites</strong>. Choose whichever Sprite Sheet you want, use the foldout (triangle) to expand it, and select and drop all the ground tiles into the center of the <strong>Tile Palette</strong> window.</li>
+</ol>
+<p>The Editor will ask you to select a folder where you want the new tiles to be saved; select the <strong>Tiles</strong> folder you just created.</p>
+<h2 id="22-scripting">2.2 Scripting</h2>
+<p>Now that you have your ground tiles, let’s write the code that creates the board where the game will happen on each level:</p>
+<p><strong>1.</strong> In the <strong>Hierarchy</strong> window, rename the <strong>Grid</strong> GameObject “BoardManager”.</p>
+<p><strong>2.</strong> In the <strong>Project</strong> window, right-click the <strong>Assets</strong> folder and select <strong>Create</strong> &gt; <strong>Folder</strong> and name it “Scripts”.</p>
+<p><strong>3.</strong> Right-click the <strong>Scripts</strong> folder and select <strong>Create</strong> &gt; <strong>Scripting</strong> &gt; <strong>MonoBehaviour Script</strong>, name it “BoardManager”, and add it as a component of the <strong>BoardManager</strong> GameObject.</p>
+<p><strong>4.</strong> Double-click the new <strong>BoardManager</strong> script to open it in your code editor.</p>
+<p>You’ll need to create the following three variables that you can set in the Editor:</p>
+<ul>
+<li>The width (in number of tiles) of our level.</li>
+<li>The height (in number of tiles) of our level.</li>
+<li>An array of tiles that are going to be used for the board.</li>
+</ul>
+<p>First, in the <strong>Start</strong> method, you need to get the Tilemap component from the child GameObjects of the GameObject the script is on (the <strong>Tilemap</strong> GameObejct is a child GameObject of the <strong>BoardManager</strong> GameObject) and store it in a private member variable for easy access later. Then the code needs to go over all the tiles in the Tilemap component and randomly select a ground tile.</p>
+<p>The method to set a tile from a tilemap is <strong>SetTile</strong>, which takes as first parameter a Vector3 Int with the coordinates of the tile (so (0,0,0) is the first cell, (1,0,0) the one on its right, (0,-1, 0) the one below etc. z is always 0 in this case as you work in 2D) and the second parameter is the actual tile to be set at that position.</p>
+<p><strong>Note</strong>: Don’t forget to add the <strong>using UnityEngine.Tilemaps</strong> namespace at the beginning of your file so you can have access to the Tilemap and Tile classes.</p>
+<p>Here is the solution:</p>
+<pre><code class="language-csharp">using UnityEngine;
+using UnityEngine.Tilemaps;
+
+public class BoardManager : MonoBehaviour
+{
+    private Tilemap m_Tilemap;
+
+    public int Width;
+    public into Height;
+    public Tile[] GroundTiles;
+
+    //Start is called before first frame update
+    void Start()
+    {
+        m_Tilemap = GetComponentInChildren&lt;Tilemap&gt;();
+
+        for (int y = 0; y &lt; Height; ++y)
+        {
+            for (int x = 0; x &lt; Width; ++x)
+            {
+                int tileNumber = Random.Range(0, GroundTiles.Length);
+                m_Tilemap.SetTitle(new Vector3Int(x,y,0),GroundTiles[titleNumber]);
+            }
+        }
+    }
+}
+</code></pre>
+<ol>
+<li>After completing your script, make sure to save it to compile the changes so they are visible in the Editor.</li>
+</ol>
+<p><strong>6.</strong>  Select the <strong>BoardManager</strong> GameObject. In the <strong>Inspector</strong> window, set the <strong>width</strong> and <strong>height</strong> variables of the Board Manager script component to <strong>8</strong>.</p>
+<p><strong>7.</strong>  Use the foldout (triangle) to expand the Ground Tiles section, then select the <strong>Add</strong> (<strong>+</strong>) button. Use the picker (<strong>⊙</strong>) and select a tile for the ground. Try to add a couple of different tiles.</p>
+<p><strong>8.</strong>  In the <strong>Game</strong> view toolbar, select the <strong>Play</strong> button to enter Play mode.</p>
+<p>You can now see the game board in both the <strong>Scene</strong> view and the <strong>Game</strong> view!</p>
+<p>Note that the <strong>Game</strong> view will only show part of the board, but you will fix the camera later!</p>
+<pre><code class="language-csharp">voidStart()
+{       
+
+m_Tilemap=GetComponentInChildren&lt;Tilemap&gt;();
+
+for(int y=0; y&lt; Height;++y)
+{
+for(int x=0; x&lt; Width;++x)
+{
+Tile tile;
+if(x==0|| y==0|| x== Width-1|| y== Height-1)
+{                   
+tile= WallTiles[Random.Range(0, WallTiles.Length)];
+}
+else
+{                   
+tile= GroundTiles[Random.Range(0, GroundTiles.Length)];
+}
+m_Tilemap.SetTile(newVector3Int(x, y,0), tile);
+}
+}
+}
+}
+</code></pre>
+<h2 id="23-camera">2.3 Camera</h2>
+<p>As your tilemap is at <strong>0</strong>,<strong>0</strong>,<strong>0</strong>, and it is <strong>8</strong> by <strong>8</strong>, its center is at (<strong>4</strong>,<strong>4</strong>,<strong>0</strong>) so set the <strong>Main Camera Position</strong> to (<strong>4</strong>,<strong>4</strong>,<strong>-10</strong>) so it aims at the center of your board.</p>
+<p>Now, when you try to enter Play mode, your board will look something like this:</p>
+<p><img alt="Image" src="images/93e360bd-ecbc-4fca-a5b8-ff1399953f01_game-view-board.png" /></p>
+<h2 id="24-board-data">2.4 Board Data</h2>
+<ul>
+<li>As of now, your board is only a collection of tiles, which are just visual. For the game to really function, you'll need to keep more data for each cell than just its sprites.</li>
+<li>To do this, you'll use a 2D array, which is an array that has two indices (in this case, the x and y of the cell). This array type will be a custom C# class, which will allow you to store any kind of data per cell.</li>
+<li>At the top of your <strong>BoardManager</strong> class, add a new class called “CellData” and make its first member variable a boolean that defines if the cell is passable or not. And then let’s declare a private property that is our 2D array board data that we will name <strong>m_BoardData</strong>.</li>
+</ul>
+<pre><code class="language-csharp">public class BoardManager:MonoBehaviour
+{
+public class CellData
+{
+public bool Passable;
+}
+privateCellData[,] m_BoardData;
+}
+</code></pre>
+<ul>
+<li><strong>CellData[,]</strong> is the way to declare a 2D array containing objects of type <strong>CellData</strong>. The “,” denotes there will be two indices to access it. So <strong>m_BoardData[0,0]</strong> is the first item of the first line, <strong>m_BoardData[1,3]</strong> the fourth item of the second line (indices start at 0!), etc.</li>
+<li>In C# you can create an array of any dimension, so <strong>CellData[,,]</strong> would be a 3D array (three indices)</li>
+<li>Finally you can update your <strong>Start</strong> method. To do this, you’ll need to do the following:<ul>
+<li>Initialize the m_BoardData array with your board width/height so it’s size is enough to store the data of all the cells.</li>
+<li>Create each CellData inside your loops and set its Passable value to <strong>true</strong> if the cell is not a border and <strong>false</strong> if it is a border.</li>
+</ul>
+</li>
+</ul>
+<pre><code class="language-csharp">voidStart()
+{    
+m_Tilemap=GetComponentInChildren&lt;Tilemap&gt;();
+m_BoardData=newCellData[Width, Height];
+for(int y=0; y&lt; Height;++y)
+{
+for(int x=0; x&lt; Width;++x)
+{
+Tile tile;            
+m_BoardData[x, y]=newCellData();
+if(x==0|| y==0|| x== Width-1|| y== Height-1)
+{                
+tile= WallTiles[Random.Range(0, WallTiles.Length)];                
+m_BoardData[x, y].Passable=false;
+}
+else
+{                
+tile= GroundTiles[Random.Range(0, GroundTiles.Length)];                
+m_BoardData[x, y].Passable=true;
+}
+m_Tilemap.SetTile(newVector3Int(x, y,0), tile);
+}
+}
+}
+</code></pre>
+<h1 id="3-character-development">3. Character Development</h1>
+<h2 id="31-adding-player-character">3.1 Adding Player Character</h2>
+<p>To add a <strong>PlayerCharacter</strong></p>
+<p><strong>1.</strong> Choose one of the player character sprites in the Sprite Sheet in the <strong>Assets</strong> &gt; <strong>Roguelike2D</strong> &gt; <strong>TutorialAssets</strong> &gt; <strong>Sprites</strong> folder and drag it into the scene to automatically create a new GameObject with a Sprite Renderer component using that sprite. Rename that GameObject “PlayerCharacter”.</p>
+<p><strong>2.</strong> Inside the <strong>Scripts</strong> folder, create a new MonoBehaviour script called “PlayerController” and add it to the <strong>PlayerCharacter</strong> GameObject you just created.</p>
+<ul>
+<li>At the start, the board sets the player on a specific cell after it finishes generating the level.</li>
+<li>When the user presses a direction button (up, down, left, or right arrow keys), the script checks if the cell in that direction is passable.</li>
+<li>If the cell is passable, the script moves the character to that new cell.</li>
+</ul>
+<p>This outline should help you realize the following about what your code needs to do to achieve this functionality:</p>
+<ul>
+<li>When the board places the player character, the player character will need a <strong>Spawn</strong> method that will move it to the right spot.</li>
+<li>The script needs to know where the player character currently is in order to search for the next cells the player character can move to, so it will need to store its current cell index.</li>
+<li>As the script needs to know if the cell the player character is trying to move to is passable, and that information is stored in the <strong>BoardManager</strong>, the script will need to store a reference to the <strong>BoardManager</strong> to query it about the state of a given cell.</li>
+</ul>
+<p><strong>3.</strong> Inside your new <strong>PlayerController</strong> script, add the following methods and variables:</p>
+<ul>
+<li>A private variable of type <strong>BoardManager</strong>.</li>
+<li>A private variable of type <strong>Vector2Int</strong> that saves the current cell the player is on.</li>
+<li>A public method called “Spawn” that saves the BoardManager that the player is placed in and the index where it is currently.</li>
+</ul>
+<pre><code class="language-csharp">usingUnityEngine;
+
+public class PlayerController:MonoBehaviour
+{
+private BoardManager m_Board; 
+private Grid m_Grid;
+private Vector2Int m_CellPosition;
+public Vector3 CellToWorld(Vector2Int cellIndex)
+    {
+        return m_Grid.GetCellCenterWorld((Vector3Int)cellIndex);
+    }
+public void Spawn(BoardManager boardManager,Vector2Int cell)
+{       
+m_Board= boardManager;       
+m_CellPosition= cell;
+public void Spawn(BoardManager boardManager, Vector2Int cell)
+{
+   m_Board = boardManager;
+   m_CellPosition = cell;
+
+   //let's move to the right position
+   transform.position = m_Board.CellToWorld(cell);
+}
+</code></pre>
+<ol>
+<li>Add the following code into your BoardManager Script:</li>
+</ol>
+<pre><code class="language-csharp">public PlayerController Player;
+// Start is called before the first frame update 
+voidStart()
+{   
+m_Tilemap=GetComponentInChildren&lt;Tilemap&gt;();   
+m_Grid=GetComponentInChildren&lt;Grid&gt;();
+m_BoardData=newCellData[Width, Height];
+for(int y=0; y&lt; Height;++y)
+{
+for(int x=0; x&lt; Width;++x)
+{
+Tile tile;           
+m_BoardData[x, y]=newCellData();
+if(x==0|| y==0|| x== Width-1|| y== Height-1)
+{               
+tile= WallTiles[Random.Range(0, WallTiles.Length)];               
+m_BoardData[x, y].Passable=false;
+}
+else
+{               
+tile= GroundTiles[Random.Range(0, GroundTiles.Length)];               
+m_BoardData[x, y].Passable=true;
+}
+m_Tilemap.SetTile(newVector3Int(x, y,0), tile);
+}
+}
+Player.Spawn(this,newVector2Int(1,1));
+}
+</code></pre>
+<p>The above code does the following things:</p>
+<ul>
+<li>Adds a public member variable (<strong>PlayerController)</strong> to the <strong>BoardManager</strong> so you can assign your <strong>PlayerCharacter</strong> GameObject to it in the <strong>Inspector</strong> window.</li>
+<li>At the end of the <strong>Start</strong> method, after the board is generated, it calls the <strong>Spawn</strong> method on that <strong>PlayerController</strong> script with a given cell (for example (1,1) the first lower-left cell that is not a wall).</li>
+<li>In the Editor, drag the <strong>PlayerCharacter</strong> GameObject from the scene into the <strong>Player</strong> slot on the <strong>BoardManager</strong> script, then enter Play mode.</li>
+</ul>
+<p><img alt="" src="https://connect-mediagw.unity.com/h1/20241010/learn/images/acd57f69-31e1-48cb-bb66-65a536b0518a_game-view-board.png" /></p>
+<p><strong>7.</strong> Select the <strong>PlayerCharacter</strong> GameObject in the <strong>Hierarchy</strong> window and look at the <strong>Scene</strong> view.</p>
+<p>You'll see that your player character is in the right place, but the board is rendered above it:</p>
+<p><img alt="image" src="images/image.png" /></p>
+<p><strong>8.</strong> In the <strong>Inspector</strong> window, use the foldout (triangle) to expand the Sprite Renderer component and set the <strong>Order in Layer</strong> property <strong>10</strong>.</p>
+<p>Setting the player character to level 10 gives you space in the future to place objects that should be above the board but under the player character.</p>
+<p><img alt="" src="https://unity-connect-prd.storage.googleapis.com/20250825/learn/images/e9369e0f-0661-4fee-9319-8dca3f951f16_Untitled_53.png" /></p>
+<h2 id="32-moving-player-character">3.2 Moving Player Character</h2>
+<p>The PlayerController script will need to do the following:</p>
+<ul>
+<li>Inside the <strong>Update</strong> method of the <strong>PlayerController</strong> script, check if an arrow key is pressed.</li>
+<li>Check if the cell in that direction is passable.</li>
+<li>If the cell is passable, move the player to the new cell.</li>
+</ul>
+<p>The code below shows one possible way of doing this.</p>
+<p>Note that you’ll need to add the <strong>UnityEngine.InputSystem</strong> library at the top of your file:</p>
+<pre><code class="language-csharp">private void Update()
+{
+Vector2Int newCellTarget= m_CellPosition;
+bool hasMoved=false;
+if(Keyboard.current.upArrowKey.wasPressedThisFrame)
+{       
+newCellTarget.y+=1;       
+hasMoved=true;
+}
+else if(Keyboard.current.downArrowKey.wasPressedThisFrame)
+{       
+newCellTarget.y-=1;       
+hasMoved=true;
+}
+else if(Keyboard.current.rightArrowKey.wasPressedThisFrame)
+{       
+newCellTarget.x+=1;       
+hasMoved=true;
+}
+else if(Keyboard.current.leftArrowKey.wasPressedThisFrame)
+{       
+newCellTarget.x-=1;       
+hasMoved=true;
+}
+if(hasMoved)
+{
+//check if the new position is passable, then move there if it is.}}
+</code></pre>
+<p>Just like with the <strong>BoardManager</strong> GameObject, you have no way of getting the information about whether a cell is passable. As before, retrieving the cell data of a specific cell is something you'll need to do a lot, so add the following method for this to your <strong>BoardManager</strong> script:</p>
+<pre><code class="language-csharp">public CellData GetCellData(Vector2Int cellIndex) 
+{
+if(cellIndex.x&lt;0|| cellIndex.x&gt;= Width|| cellIndex.y&lt;0|| cellIndex.y&gt;= Height)
+{
+return null;
+}
+return m_BoardData[cellIndex.x, cellIndex.y];
+}
+</code></pre>
+<p>This method returns the information saved on the array <strong>m_BoardData</strong> of that cell. Restricting the search on the array to only the actual cells available in that level so you don’t generate an exception trying to index a cell that doesn’t exist. In that case, the method returns null.</p>
+<p>You can now update your <strong>Update</strong> method in your <strong>PlayerController</strong> script so it uses the following method:</p>
+<pre><code class="language-csharp">private void Update()
+{
+Vector2Int new CellTarget= m_CellPosition;
+bool hasMoved=false;
+if(Keyboard.current.upArrowKey.wasPressedThisFrame)
+{        
+newCellTarget.y+=1;        
+hasMoved=true;
+}
+else if(Keyboard.current.downArrowKey.wasPressedThisFrame)
+{        
+newCellTarget.y-=1;        
+hasMoved=true;
+}
+else if(Keyboard.current.rightArrowKey.wasPressedThisFrame)
+{        
+newCellTarget.x+=1;        
+hasMoved=true;
+}
+else if(Keyboard.current.leftArrowKey.wasPressedThisFrame)
+{        
+newCellTarget.x-=1;        
+hasMoved=true;
+}
+if(hasMoved)
+{
+//check if the new position is passable, then move there if it 
+is.BoardManager.CellData cellData= m_Board.GetCellData(newCellTarget);
+if(cellData!=null&amp;&amp; cellData.Passable)
+{
+m_CellPosition= newCellTarget;            
+transform.position= m_Board.CellToWorld(m_CellPosition);
+}
+}
+}
+</code></pre>
+<h2 id="33-refactoring">3.3 Refactoring</h2>
+<ul>
+<li>In a prototyping environment like this one, where you keep finding solutions to problems that appear as you progress, it’s good to take a second to look at your code and check if you have areas that you can clean up.</li>
+<li>In this case, you may have noticed some code duplication: you move the player in the <strong>Spawn</strong> method and also later in the <strong>Update</strong> method.</li>
+<li>Code duplication is not always bad, but in this case it could create errors: when the character moves, both the <strong>CellPosition</strong> and the <strong>Transform</strong> position need to be updated. It would be easy to forget one of the two if you need to move the character elsewhere in the code. Plus, there might be things you want to add to your code later; for example, adding a sound every time the character moves. To do this, you would have to track every place you move the character to add that sound.</li>
+<li>It would be safer and more efficient to wrap all of that functionality into a <strong>MoveTo</strong> method that takes a new cell the player will move to as a parameter and takes care of everything related to moving the <strong>PlayerCharacter</strong> GameObject.</li>
+<li>Copy and paste the <strong>MoveTo</strong> method code below into your <strong>PlayerController</strong> script to add that method and replace both movements in the <strong>Start</strong> and <strong>Update</strong> methods with it:</li>
+</ul>
+<pre><code class="language-csharp">using UnityEngine;
+using UnityEngine.InputSystem;
+public class PlayerController:MonoBehaviour
+{
+private BoardManager m_Board;
+private Vector2Int m_CellPosition;
+public void Spawn(BoardManager boardManager,Vector2Int cell)
+{       
+m_Board= boardManager;MoveTo(cell);
+}
+public void MoveTo(Vector2Int cell)
+{       
+m_CellPosition= cell;       
+transform.position= m_Board.CellToWorld(m_CellPosition);
+}
+
+private voidUpdate()
+{
+Vector2Int newCellTarget= m_CellPosition;
+bool hasMoved=false;
+if(Keyboard.current.upArrowKey.wasPressedThisFrame)
+{           
+newCellTarget.y+=1;           
+hasMoved=true;
+}
+else if(Keyboard.current.downArrowKey.wasPressedThisFrame)
+{           
+newCellTarget.y-=1;           
+hasMoved=true;
+}
+else if(Keyboard.current.rightArrowKey.wasPressedThisFrame)
+{           
+newCellTarget.x+=1;           
+hasMoved=true;
+}
+else if(Keyboard.current.leftArrowKey.wasPressedThisFrame)
+{           
+newCellTarget.x-=1;           
+hasMoved=true;
+}
+if(hasMoved)
+{
+//check if the new position is passable, then move there if it 
+is.BoardManager.CellData cellData= m_Board.GetCellData(newCellTarget);
+if(cellData!=null&amp;&amp; cellData.Passable){MoveTo(newCellTarget);
+}
+}
+}
+}
+</code></pre>
+<h1 id="4-adding-a-turn-system">4. Adding a Turn System</h1>
+<h2 id="41-turn-manager">4.1 Turn Manager</h2>
+<ul>
+<li>If you go back to your list of tasks, the next step after having a moving player is implementing a turn system when the player character makes a move.</li>
+<li>
+<p>To create a turn system, follow these instructions:</p>
+<p><strong>1.</strong> Right-click the <strong>Scripts</strong> folder in the <strong>Project</strong> window and select <strong>Create</strong> &gt; <strong>Scripting</strong> &gt; <strong>Empty C# Script</strong>. Name this script “<strong>TurnManager</strong>”</p>
+<p>In this instance, you don’t need to use a MonoBehaviour script because, unlike the other scripts you’ve written so far, this one is a pure data class that just handles data and is not linked to a GameObject, so it doesn’t need to inherit from MonoBehaviour.</p>
+</li>
+</ul>
+<h3 id="turnmanager"><strong>TurnManager:</strong></h3>
+<pre><code class="language-csharp">using UnityEngine;
+public class TurnManager
+{
+
+}
+</code></pre>
+<p>Because this is not a MonoBehaviour script and doesn’t exist in the scene, there is no <strong>Start</strong> or <strong>Update</strong> method, so you'll need to create/initialize it manually, like you would when you initialize a Vector3 or your CellData.</p>
+<p>There are several ways you might do this:</p>
+<ul>
+<li>Inside your <strong>BoardManager</strong>’s <strong>Start</strong> method.</li>
+<li>Inside your <strong>PlayerController</strong>’s <strong>Spawn</strong> method.</li>
+<li>Inside a new system that takes care of initializing everything needed for a level at start.</li>
+</ul>
+<p>That last solution seems to be the cleanest, as there will probably be other things you need to initialize when the game gets more complex.</p>
+<p>Think about the startup of your game. Right now you rely only on the <strong>Start</strong> method of the <strong>BoardManager</strong> to initialize everything, but later on when you want to handle multiple levels, you might need to call the initialization code again.</p>
+<p>Instead of this, let’s create a <strong>GameManager</strong> GameObject that will be the entry point for everything the game needs when starting. It will consist of a script whose <strong>Start</strong> method will do the following:</p>
+<ul>
+<li>Initialize the <strong>TurnManager.</strong></li>
+<li>Trigger the <strong>BoardGeneration</strong>.</li>
+<li>Spawn the <strong>Player</strong>.</li>
+</ul>
+<p>So you have some new code to write and some refactoring to do first!</p>
+<p><strong>1.</strong> In the <strong>Main</strong> scene, create a new empty GameObject and name it “GameManager”.</p>
+<p><strong>2.</strong> Right-click the <strong>Scripts</strong> folder in the <strong>Project</strong> window and select <strong>Create</strong> &gt; <strong>Scripting</strong> &gt; <strong>MonoBehaviour Script</strong>. Name this script “GameManager”.</p>
+<p><strong>3.</strong> Add the <strong>GameManager</strong> script as a component to the <strong>GameManager</strong> GameObject.</p>
+<p><strong>4.</strong> Inside the script create two public references:</p>
+<ul>
+<li>One for the <strong>Board</strong> of type <strong>BoardManager</strong>.</li>
+<li>One for the <strong>Player</strong> of type <strong>PlayerController</strong>.</li>
+</ul>
+<p><strong>5.</strong> Create a private variable of type <strong>TurnManager</strong>.</p>
+<p><strong>6.</strong> Inside <strong>GameManager</strong> script’s <strong>Start</strong> method do the following:</p>
+<ul>
+<li>Initialize the TurnManager (it’s just a normal class, so you can use “new”)</li>
+<li>Initialize the level (you’ll have to rename the <strong>Start</strong> method in the <strong>BoardManager</strong> to <strong>Init</strong> and make it <strong>public</strong> to be able to call it from this <strong>Start</strong> method)</li>
+<li>Spawn the player at (1,1), so you'll have to remove the call to spawn the player from the <strong>BoardManager Init</strong> method.</li>
+</ul>
+<p>You should be able to do it all by yourself, and here is what the final scripts look like:</p>
+<h3 id="boardmanager"><strong>BoardManager</strong></h3>
+<pre><code class="language-csharp">public class BoardManager:MonoBehaviour
+{
+public class CellData
+{
+public bool Passable;
+}
+private CellData[,] m_BoardData;
+private Tilemap m_Tilemap;
+private Grid m_Grid;
+public int Width;
+public int Height;
+public Tile[] GroundTiles;
+public Tile[] WallTiles;
+public void Init()
+{       
+m_Tilemap=GetComponentInChildren&lt;Tilemap&gt;();       
+m_Grid=GetComponentInChildren&lt;Grid&gt;();
+       m_BoardData=newCellData[Width, Height];
+for(int y=0; y&lt; Height;++y)
+{
+for(int x=0; x&lt; Width;++x)
+{
+Tile tile;               
+m_BoardData[x, y]=newCellData();
+if(x==0|| y==0|| x== Width-1|| y== Height-1)
+{
+tile= WallTiles[Random.Range(0, WallTiles.Length)];                   
+m_BoardData[x, y].Passable=false;
+}
+else                  
+{
+tile= GroundTiles[Random.Range(0, GroundTiles.Length)];                   
+m_BoardData[x, y].Passable=true;
+}
+m_Tilemap.SetTile(newVector3Int(x, y,0), tile);
+}
+}
+}
+public Vector3CellToWorld(Vector2Int cellIndex)
+{
+return m_Grid.GetCellCenterWorld((Vector3Int)cellIndex);
+}
+public CellData GetCellData(Vector2Int cellIndex)
+{
+if(cellIndex.x&lt;0|| cellIndex.x&gt;= Width|| cellIndex.y&lt;0|| cellIndex.y&gt;= Height)
+{
+return null;
+}
+return m_BoardData[cellIndex.x, cellIndex.y];
+}
+}
+</code></pre>
+<h3 id="gamemanager">GameManager</h3>
+<pre><code class="language-csharp">public class GameManager:MonoBehaviour
+{
+public BoardManager BoardManager;
+public PlayerController PlayerController;
+private TurnManager m_TurnManager;
+// Start is called once before the first execution of Update after the MonoBehaviour is created
+ void Start()
+ {       
+ m_TurnManager=newTurnManager();
+ BoardManager.Init();       
+ PlayerController.Spawn(BoardManager,newVector2Int(1,1));
+ }
+ }
+</code></pre>
+<h2 id="42-ticking-turn">4.2 Ticking Turn</h2>
+<ul>
+<li>To do this, you’ll need a private member variable that saves the current turn number, initialized at 1 in the constructor, and a <strong>Tick</strong> method that increases the count by 1 and writes the current turn count using the <strong>Debug.Log</strong> method, like the following:</li>
+</ul>
+<pre><code class="language-csharp">public class TurnManager
+{
+privateint m_TurnCount;
+publicTurnManager()
+{       
+m_TurnCount=1;
+}
+public void Tick()
+{       
+m_TurnCount+=1;       
+Debug.Log(&quot;Current turn count : &quot;+ m_TurnCount);
+}
+}
+</code></pre>
+<ul>
+<li>Then you’ll need to call <strong>Tick</strong> every time the player moves. But how to do this? The only place that has a reference to the <strong>TurnManager</strong> is inside the <strong>GameManager</strong>.</li>
+<li>You could pass the <strong>GameManager</strong> to our <strong>Player</strong>, like you did for the <strong>BoardManager</strong>, but as a lot of other things in your game may require access to the <strong>GameManager</strong>, it’s a better idea to explore another method: the singleton pattern.</li>
+<li>Using a singleton pattern means that there can only be one instance of a given class in your game/application and you can access it through a static member accessible from anywhere.</li>
+<li>It is a powerful tool that makes code faster to write and simpler to understand. In the case of the <strong>TurnManager</strong> script, the drawbacks of a singleton pattern are worth it in exchange for not having to pass the <strong>GameManager</strong> all around your application code to every object that needs it.</li>
+</ul>
+<p>This is our new singleton <strong>GameManager</strong>:</p>
+<pre><code class="language-csharp">public class GameManager:MonoBehaviour
+{
+public static GameManager Instance
+{
+get
+;
+private set;
+}
+public BoardManager BoardManager;
+public PlayerController PlayerController;
+private TurnManager m_TurnManager;
+private void Awake()
+{
+if(Instance!=null)
+{
+Destroy(gameObject);
+return;
+}
+       Instance=this;
+       }
+voidStart()
+{       
+m_TurnManager=newTurnManager();
+BoardManager.Init();       
+PlayerController.Spawn(BoardManager,newVector2Int(1,1));
+}
+}
+</code></pre>
+<ul>
+<li>There is a static <strong>GameManager</strong> property member called <strong>Instance</strong>. This will store a reference to your GameManager. There are two keywords: get and set. <strong>set</strong> is preceded by the <strong>private</strong> keyword. What this means is that accessing that member variable (get) is available for all parts of the code, but writing the value of that member variable (set) can only be done from inside the class.</li>
+<li>A new method called <strong>Awake</strong> was added. This is called before <strong>Start</strong> when the GameObject is created. In this method, the following happens:<ul>
+<li>The code tests if <strong>Instance</strong> is null. If it’s not, that means there’s already a <strong>GameManager</strong>. This shouldn’t happen because a singleton pattern needs to be unique, so we destroy this GameManager and exit the method (as this is a void type method, “return;” doesn’t return anything).</li>
+<li>If there is no <strong>GameManager</strong> stored yet (<strong>Instance</strong> is null) we store that <strong>GameManager</strong> in <strong>Instance</strong>.</li>
+</ul>
+</li>
+<li>
+<p>Now you can use the following instance anywhere in your code to access the <strong>GameManager</strong>:</p>
+<p>GameManager.instance</p>
+</li>
+<li>
+<p>Now if you change the <strong>TurnManager</strong> variable of the <strong>GameManager</strong> to be <strong>public</strong>, other scripts will also be able to access it through <strong>GameManager.Instance</strong>. Define the <strong>TurnManager</strong> <strong>set</strong> property as <strong>private</strong> so only the <strong>GameManager</strong> script can change this variable, but leave the <strong>get</strong> property <strong>public</strong> so other scripts can access the <strong>TurnManager</strong>.</p>
+</li>
+</ul>
+<pre><code class="language-csharp">public class GameManager:MonoBehaviour
+{
+public static GameManager Instance
+{
+get;
+private set;
+}
+public BoardManager BoardManager;
+public PlayerController PlayerController;
+public TurnManager TurnManager
+{
+get;
+private set;
+}
+private voidAwake()
+{
+if(Instance!=null)
+{
+Destroy(gameObject);
+return;
+}
+       Instance=this;
+       }
+voidStart()
+{       
+TurnManager=newTurnManager();
+BoardManager.Init();       
+PlayerController.Spawn(BoardManager,newVector2Int(1,1));
+}
+}
+</code></pre>
+<p>Then in the <strong>Update</strong> method of your <strong>PlayerController</strong>, you can “tick” the <strong>TurnManager</strong> just before calling <strong>MoveTo</strong>:</p>
+<pre><code class="language-csharp">if(hasMoved)
+{
+//check if the new position is passable, then move there if it is.
+BoardManager.CellData cellData= m_Board.GetCellData(newCellTarget);
+if(cellData!=null&amp;&amp; cellData.Passable)
+{       
+GameManager.Instance.TurnManager.Tick();
+MoveTo(newCellTarget);
+}
+}
+</code></pre>
+<p>Now you can try to play the game and check that a new turn count is printed in the console every time you move.</p>
+<p><img alt="image" src="images/image.png" /></p>
+<h1 id="5-adding-a-health-system">5. Adding a Health System</h1>
+<h2 id="51-add-a-food-resource">5.1 Add a Food resource</h2>
+<ul>
+<li>The problem is that right now there’s no way to know when a turn happens inside the <strong>GameManager</strong>. Getting notified when a turn happens is going to be an important function you will need many times in the game.</li>
+<li>To address this problem, you can implement a callback system. A <strong>callback system</strong> allows any part of the code to give a method that can be called when an event happens. In this case, when a turn happens, all registered components will get notified and the given methods will be called.</li>
+<li>Because this callback won’t have any parameters (it just needs to know if something happens or not), you can use <strong>System.Action</strong> as the type of the callback (it’s a built-in type in the C# standard library for callbacks).</li>
+<li>
+<p>Add the following to your <strong>TurnManager</strong> script after the first “{“:</p>
+<p><code>public event System.Action OnTick;</code></p>
+</li>
+<li>
+<p><strong>Note</strong>: <strong>event</strong> is a special C# keyword for callback. This means only the class in which <strong>OnTick</strong> is declared (in this case TurnManager) can trigger the event, nothing else.</p>
+</li>
+<li>
+<p>Add the following inside the <strong>Tick</strong> method:</p>
+<p><code>OnTick?.Invoke();</code></p>
+</li>
+<li>
+<p><strong>Invoke</strong> is the method in <strong>System.Action</strong> that will call (“invoke”) all the callback methods that were registered to the <strong>OnTick</strong> event.</p>
+</li>
+<li>The <strong>?</strong> is a special C# syntax used to test if <strong>OnTick</strong> is null. If it’s null, ? does nothing, but if it’s not null, ? will call the method on the right of the ?. It’s a shorthand version that does the same thing as:</li>
+</ul>
+<pre><code class="language-csharp">if(OnTick!=null)
+{   
+OnTick.Invoke();
+}
+</code></pre>
+<ul>
+<li>You need to test if <strong>OnTick</strong> is null because if no other part of the code registered a callback function to <strong>OnTick</strong>, then it will be null, and trying to call <strong>Invoke</strong> on a null object will generate an error and break the game!</li>
+<li>Now other scripts can register to that callback to get notified when a tick happens. In your <strong>GameManager</strong>, do the following:<ul>
+<li>Add a private integer member that stores how much food you currently have (initialized at 100).</li>
+<li>Add a method called “OnTurnHappen” that will be called when a turn happens.</li>
+<li>Register the <strong>OnTurnHappen</strong> method to your <strong>TurnManager.OnTick</strong> callback.</li>
+</ul>
+</li>
+</ul>
+<pre><code class="language-csharp">private int m_FoodAmount=100;
+...voidStart()
+{   
+TurnManager=newTurnManager();   
+TurnManager.OnTick+= OnTurnHappen;
+BoardManager.Init();   
+PlayerController.Spawn(BoardManager,newVector2Int(1,1));
+}
+void OnTurnHappen()
+{   
+m_FoodAmount-=1;   
+Debug.Log(&quot;Current amount of food : &quot;+ m_FoodAmount);
+}
+</code></pre>
+<p><strong>TurnManager.OnTick += OnTurnHappen</strong> is how you register a method callback to the <strong>OnTick</strong> event. When <strong>OnTick</strong> has its <strong>Invoke</strong> method called, it calls the <strong>OnTurnHappen</strong> method. <strong>+=</strong> is used because we add the method to all the other ones already registered (right now there is a single one, but later you’ll have more methods called when <strong>OnTick</strong> happens).</p>
+<h2 id="52-ui-designing">5.2 UI Designing</h2>
+<p>To add UI elements to your game, follow these instructions:</p>
+<p><strong>1.</strong> Right-click in the <strong>Hierarchy</strong> window and select <strong>UI Toolkit</strong> &gt; <strong>UI Document</strong>.</p>
+<p>This will create a new GameObject with a <strong>UI Document</strong> component attached to it. It will also create all the default settings for the UI Toolkit in your project.</p>
+<p>The UI toolkit works by decoupling the structure, look, and behavior of the UI in the following ways:</p>
+<ul>
+<li>The structure is given by a UXML file (that is similar to an HTML file) that defines which elements your UI is made of and their hierarchical relationship.</li>
+<li>The look is defined by a USS file (similar to a CSS file) that defines visual properties (colors, borders, spacing, alignment, etc.) of your UI element.</li>
+<li>The behavior is coded in C# by retrieving elements by their name or id and applying listeners or other behavior on them.</li>
+</ul>
+<p>Right now, the UI document component expects a Visual Tree Asset as its source. A <strong>Visual Tree Asset</strong> is a UXML file that defines your UI’s structure.</p>
+<p><strong>2.</strong> In the <strong>Project</strong> window, right-click the <strong>Assets</strong> folder and select <strong>Create</strong> &gt; <strong>Folder</strong> and name it “UI”.</p>
+<p><strong>3.</strong> Right-click the <strong>UI</strong> folder and select <strong>Create</strong> &gt; <strong>UI Toolkit</strong> &gt; <strong>UI Document</strong> and name it “GameUI”.</p>
+<p><strong>4.</strong> In the <strong>Hierarchy</strong> window, select the <strong>UIDocument</strong> GameObject, then in the <strong>Inspector</strong> window select the <strong>Source Asset</strong> picker (⊙) and select the <strong>GameUI</strong> document.</p>
+<p><strong>5.</strong> Double click the <strong>GameUI</strong> document.</p>
+<ul>
+<li>This will open the <strong>UI Builder</strong> window. Double click the window name to expand the window.</li>
+</ul>
+<p><img alt="" src="https://connect-mediagw.unity.com/h1/20240927/learn/images/048578fd-d7e6-4dc8-b4c9-fdb795ea5847_ui-builder-window.png" /></p>
+<ul>
+<li>The <strong>UI Builder</strong> window is a visual tool that lets you edit UXML files (like your <strong>GameUI</strong> document) visually instead of through text.</li>
+<li>The upper-left panel contains the <strong>Hierarchy</strong> window of your UI, which at the moment only contains the GameUI.uxml file. Below the <strong>Hierarchy</strong> window there is the <strong>Library</strong> window that contains all kinds of UI controls you can add to your UI.</li>
+<li>The central <strong>Viewpoint</strong> window consists of the view of your UI, which is currently empty.</li>
+<li>The rightmost window is the <strong>Inspector</strong> window, which displays all the properties of a selected UI element.</li>
+</ul>
+<p><strong>6.</strong> In the <strong>Library</strong> window, under the <strong>Controls</strong> section, drag and drop the <strong>Label</strong> element into the <strong>Viewport</strong> window.</p>
+<p><img alt="" src="https://connect-mediagw.unity.com/h1/20240927/learn/images/cb13e86d-57a0-42c4-9bfb-c97caef020aa_drag-label-to-panel.png" /></p>
+<p><strong>7.</strong> With <strong>Label</strong> selected in the <strong>Hierarchy</strong> window, select the <strong>Label</strong> box in the <strong>Inspector</strong> window and rename it “FoodLabel”.</p>
+<p><img alt="" src="https://connect-mediagw.unity.com/h1/20240927/learn/images/bfec1791-875f-415e-8369-6637cb16ae74_inspetor-label-window.png" /></p>
+<p><strong>8.</strong> With the <strong>Label</strong> selected in the <strong>Hierarchy</strong> window, in the <strong>Inspector</strong> window, use the foldout (triangle) to expand the <strong>Text</strong> section.</p>
+<p><strong>9.</strong> Select the <strong>Font</strong> property picker (⊙) and assign either the provided PressStart2P-Regular font or your own.</p>
+<p><strong>10.</strong> Select the <strong>Color</strong> property box and set the color to white (<strong>FFFFFF</strong>) so the <strong>Label</strong> will stand out on the black background.</p>
+<p><img alt="" src="https://unity-connect-prd.storage.googleapis.com/20250825/learn/images/a5a2290e-884a-48a7-a2a3-ea4e86d9482c_Untitled_54.png" /></p>
+<p>The <strong>Label</strong> font should have changed in the <strong>Viewport</strong> window.</p>
+<p><img alt="" src="https://connect-mediagw.unity.com/h1/20240927/learn/images/1d1119ae-b67f-4286-b34d-6d52b16e5efb_label-top-left.png" /></p>
+<p><strong>11.</strong> Change the <strong>Size</strong> property and make it bigger or smaller according to your own preferences (experiment with different sizes until you find one you like), and finally center the text using the <strong>Align</strong> property.</p>
+<p><img alt="" src="https://connect-mediagw.unity.com/h1/20240927/learn/images/f37b70da-9e9b-44e2-886d-1953964a4291_size-allign-properties.png" /></p>
+<p>Finally, let’s put the label at the bottom of the screen. Right now the UI toolkit uses automatic layout. The default layout organizes consecutive elements in the <strong>Hierarchy</strong> window from top to bottom, stretching across the width of the UI document.</p>
+<p>Instead, use manual positioning to place the <strong>Label</strong> exactly where you want.</p>
+<p><strong>12.</strong> Use the foldout (triangle) to expand the <strong>Position</strong> section in the <strong>Inspector</strong> window.</p>
+<p><strong>13.</strong> Open the <strong>Position Mode</strong> property dropdown and change the <strong>Position Mode</strong> from <strong>Relative</strong> to <strong>Absolute</strong>.</p>
+<p>In <strong>Absolute</strong> mode, the four offsets (Top/Right/Bottom/Left) are the distance to each border of the screen.</p>
+<p><strong>14.</strong> Set the <strong>Bottom</strong> offset to <strong>0</strong>.</p>
+<p><img alt="" src="https://connect-mediagw.unity.com/h1/20240927/learn/images/bb76cdd3-82ee-44fe-9a03-cf83fd333520_label-botton-left.png" /></p>
+<p><strong>15.</strong> Set both the <strong>Left</strong> and <strong>Right</strong> offsets to <strong>0</strong>.</p>
+<p><img alt="" src="https://connect-mediagw.unity.com/h1/20240927/learn/images/c8a4a583-899c-4fcd-a6a5-9546c6a3030d_label-justified.png" /></p>
+<p><img alt="" src="https://connect-mediagw.unity.com/h1/20240927/learn/images/833af6ad-198f-4a85-a821-831fe26bc972_save-button.png" /></p>
+<p><strong>16.</strong> In the Editor, enter Play mode to check how your changes look in game.</p>
+<p><img alt="" src="https://unity-connect-prd.storage.googleapis.com/20250825/learn/images/5ffe6a20-0a9f-4bc1-9acc-754c2107cb34_Untitled_55.png" /></p>
+<p><img alt="" src="https://connect-mediagw.unity.com/h1/20240927/learn/images/7f75086d-79a1-41d4-ad20-fc8532ebf5a6_maximize-wndow-button.png" /></p>
+<h2 id="53-updating-the-label-using-code">5.3 Updating the Label Using Code</h2>
+<p>To do this, you’ll use the <strong>GameManager</strong>:</p>
+<p><strong>1.</strong> Add a <strong>public</strong> variable of type <strong>UIDocument</strong> to your <strong>GameManager</strong> script. You also need to add <strong>using</strong> <strong>UnityEngine.UIElements</strong> at the top of the file to be able to use the classes related to UI Toolkit like UIDocument.</p>
+<p><strong>2.</strong> Create a <strong>private</strong> variable of type <strong>Label</strong> to store a reference to the Label so you can access and modify it.</p>
+<p>You can now assign your UI Document (the component on the <strong>UIDocument</strong> GameObject, not the Game UI file) to your GameManager in the <strong>Inspector</strong> window.</p>
+<p>You can then add the code that finds the Label inside your GameUI and update its text to the Food count in the <strong>GameManager</strong> <strong>Start</strong> method:</p>
+<pre><code class="language-csharp">using UnityEngine.UIElements;
+public class GameManager:MonoBehaviour
+{
+...public UIDocument UIDoc;
+private Label m_FoodLabel;...
+void Start()
+{    
+m_FoodLabel= UIDoc.rootVisualElement.Q&lt;Label&gt;(&quot;FoodLabel&quot;);    
+m_FoodLabel.text=&quot;Food : &quot;+ m_FoodAmount;...
+}...
+}
+</code></pre>
+<ul>
+<li><strong>UIDocument</strong> has a .<strong>rootVisualElement</strong> property that is the root (the first element) of the <strong>Hierarchy</strong> window you saw in the <strong>UIBuilder</strong> window earlier. All elements in the <strong>Hierarchy</strong> window (like the label) are child elements of that root element..</li>
+<li>This root (and any element of the UIToolkit) has a special method, <strong>Q</strong>, short for <strong>Query</strong>. This <strong>Q</strong> method looks for an element of the given type (for example, <strong>Label</strong>) with the given name (for example, <strong>FoodLabel</strong>) in the child elements of the element on which you call Q.</li>
+<li><strong>m_FoodLabel</strong> is an additional private variable of type Label to add to your <strong>GameManager</strong> so you can store the <strong>Label</strong> and not have to look for it everytime with the <strong>Q</strong> method.</li>
+<li>The <strong>.text</strong> property is used to set the text of the label to display the current amount of food (for example, Food:100).</li>
+</ul>
+<p>You should now have your food count at the bottom of your screen.</p>
+<p><img alt="" src="https://connect-mediagw.unity.com/h1/20240927/learn/images/16014662-233b-4075-a796-b3aa51afa0b6_game-view-food-counter.png" /></p>
+<p>However, you’ll notice that the counter doesn’t update when the player character moves. For this, you have to replace the <strong>Debug.Log</strong> you wrote earlier in the <strong>OnTurnHappen</strong> method with the following:</p>
+<pre><code class="language-csharp">voidOnTurnHappen()
+{   
+m_FoodAmount-=1;   
+m_FoodLabel.text=&quot;Food : &quot;+ m_FoodAmount;
+}
+</code></pre>
+<p>Now, if you enter Play mode and move around, the food counter will decrease</p>
+<h2 id="54-objects-in-cell-and-food-refill">5.4 <strong>Objects in cell and food refill</strong></h2>
+<p>Collider and Rigidbody components are used to detect collisions and overlapping of objects. But in this case, because the game is turn based and happens on a grid, you don’t need to use physics.</p>
+<p>You already have <strong>CellData</strong> for each cell in the game, and you use it to store whether the cell is passable or not. Now, you’ll add a new value to that <strong>CellData</strong> that stores whether the cell contains an object or not:</p>
+<p><strong>1.</strong> Open your <strong>BoardManager</strong> script and inside the <strong>CellData</strong> class add the following new variable:</p>
+<pre><code class="language-csharp">public class CellData
+{
+public bool Passable;
+public GameObject ContainedObject;
+}
+</code></pre>
+<p><strong>2.</strong> Drag your preferred food sprite into the scene to create a new GameObject with that sprite, name it “SmallFood”, set its <strong>order in layer</strong> to something between <strong>1</strong> and <strong>9</strong>.</p>
+<p><strong>3.</strong> In the <strong>Project</strong> window, right-click the <strong>Assets</strong> folder and select <strong>Create</strong> &gt; <strong>Folder,</strong> new it “Prefabs”<strong>,</strong> then drag and drop your <strong>SmallFood</strong>GameObject from the <strong>Hierarchy</strong> window into the new <strong>Prefabs</strong> folder.</p>
+<p>This will create a prefab from that GameObject that you can reuse multiple times and between scenes.</p>
+<p><strong>4.</strong> Delete the <strong>SmallFood</strong>GameObject from the scene.</p>
+<p><strong>5.</strong> In <strong>BoardManager</strong>, add a public variable <strong>FoodPrefab</strong> of type <strong>GameObject</strong>, to store the prefab of the food you just created.</p>
+<pre><code class="language-csharp">public GameObject FoodPrefab;
+</code></pre>
+<p><strong>6.</strong> Write a new void method named “GenerateFood”, then copy and paste the following code into that method:</p>
+<pre><code class="language-csharp">void GenerateFood()
+{
+int foodCount=5;
+for(int i=0; i&lt; foodCount;++i)
+{
+int randomX= Random.Range(1, Width-1);
+int randomY= Random.Range(1, Height-1);
+CellData data= m_BoardData[randomX, randomY];
+if(data.Passable&amp;&amp; data.ContainedObject==null)
+{
+GameObject newFood=Instantiate(FoodPrefab);           
+newFood.transform.position=CellToWorld(newVector2Int(randomX, randomY));           
+data.ContainedObject= newFood;
+}
+}
+}
+</code></pre>
+<ul>
+<li>Creates an <strong>int</strong> variable that stores how many food prefabs will be created (making a variable allows you to easily change it to test different values)</li>
+<li>Loops this number of times:<ul>
+<li>On each loop, a random x and y position are picked. <strong>Random.Range</strong> returns a number contained between the first parameter (included) and the second (excluded). Note that the range is 1 to size - 2 (as size -1 is excluded) because the code shouldn’t pick a cell that is an outside wall!</li>
+<li>It then retrieves the <strong>CellData</strong> for that cell position.</li>
+<li>If this cell is passable and there is no object there, it instantiates a new food prefab in that position and stores that food as the <strong>ContainedObject</strong> in that cell in its <strong>CellData</strong>.</li>
+</ul>
+</li>
+</ul>
+<p><strong>7.</strong> Call this new method at the end of the <strong>Init</strong> method of the <strong>BoardManager</strong>, once the level has been created.</p>
+<pre><code class="language-csharp">public  voidInit()
+{
+m_Tilemap=GetComponentInChildren&lt;Tilemap&gt;();        
+m_Grid=GetComponentInChildren&lt;Grid&gt;();
+m_BoardData=newCellData[Width, Height];
+for(int y=0; y&lt; Height;++y)
+{
+for(int x=0; x&lt; Width;++x)
+{
+Tile tile;                
+m_BoardData[x, y]=newCellData();
+if(x==0|| y==0|| x== Width-1|| y== Height-1)
+{                    
+tile= WallTiles[Random.Range(0, WallTiles.Length)];                    
+m_BoardData[x, y].Passable=false;
+}
+else
+{                    
+tile= GroundTiles[Random.Range(0, GroundTiles.Length)];                    
+m_BoardData[x, y].Passable=true;
+}
+m_Tilemap.SetTile(newVector3Int(x, y,0), tile);
+}               
+}
+GenerateFood();
+}
+</code></pre>
+<p><strong>8.</strong> Save your changes to the scripts, assign your SmallFood prefab to the <strong>FoodPrefab</strong> slot on the <strong>BoardManager</strong> in the <strong>Inspector</strong> window, and then enter Play mode to check if food appears on your map.</p>
+<p><strong>9.</strong> Add a new variable called “m_EmptyCellsList” of type <strong>List</strong> containing <strong>Vector2Int</strong> in the <strong>BoardManager</strong> script. You’ll need to add <strong>using</strong> <strong>System.Collections.Generic</strong> at the top of your file to be able to use <strong>List:</strong></p>
+<pre><code class="language-csharp">public voidInit()
+{   
+m_Tilemap=GetComponentInChildren&lt;Tilemap&gt;();   
+m_Grid=GetComponentInChildren&lt;Grid&gt;();
+//Initialize the list   
+m_EmptyCellsList=newList&lt;Vector2Int&gt;();
+m_BoardData=newCellData[Width, Height];
+
+for(int y=0; y&lt; Height;++y)
+{
+for(int x=0; x&lt; Width;++x)
+{
+Tile tile;           
+m_BoardData[x, y]=newCellData();
+if(x==0|| y==0|| x== Width-1|| y== Height-1)
+{               
+tile= WallTiles[Random.Range(0, WallTiles.Length)];               
+m_BoardData[x, y].Passable=false;
+}
+else
+{               
+tile= GroundTiles[Random.Range(0, GroundTiles.Length)];               
+m_BoardData[x, y].Passable=true;
+//this is a passable empty cell, add it to the list               
+m_EmptyCellsList.Add(newVector2Int(x, y));
+}
+m_Tilemap.SetTile(newVector3Int(x, y,0), tile);}}
+//remove the starting point of the player, It's not empty, the player is there   
+m_EmptyCellsList.Remove(newVector2Int(1,1));GenerateFood();
+}
+</code></pre>
+<pre><code class="language-csharp">...m_EmptyCellsList.Remove(newVector2Int(1,1));GenerateFood();
+</code></pre>
+<p>You can replace picking a random coordinate in the <strong>GenerateFood</strong> method with an entry from the <strong>m_EmtpyCellsList</strong> list, and then remove that entry from the <strong>m_EmtpyCellsList</strong> list (because the cell is no longer empty).</p>
+<p>This is the final version of GenerateFood using the empty cell list :</p>
+<pre><code class="language-csharp">void GenerateFood()
+{
+int foodCount=5;
+for(int i=0; i&lt; foodCount;++i)
+{
+int randomIndex= Random.Range(0, m_EmptyCellsList.Count);
+Vector2Int coord= m_EmptyCellsList[randomIndex];
+       m_EmptyCellsList.RemoveAt(randomIndex);
+       CellData data= m_BoardData[coord.x, coord.y];
+       GameObject newFood=Instantiate(FoodPrefab);       
+       newFood.transform.position=CellToWorld(coord);       
+       data.ContainedObject= newFood;
+       }
+       }
+</code></pre>
+<h2 id="55-collect-food">5.5 <strong>Collect food</strong></h2>
+<p>A very basic way to do this would be to follow this structure:</p>
+<ul>
+<li>When entering a new cell, check if there is a <strong>ContainedObject</strong> in that cell’s <strong>CellData</strong>.</li>
+<li>If yes, increase the food counter of the player character by a certain amount.</li>
+</ul>
+<p>This works, and you can even test doing it this way if you feel up for the challenge. However, this approach is very limited. For example, what if you want different food objects to give different amounts of food points, or you want to make poisoned food that makes you lose food points?</p>
+<p>To do this, you need a way to make handling objects in a cell more generic, like a generic <strong>CellObject</strong> type that your CellData can contain and then act on that object when the player character interacts with a cell. That way you can easily write a new CellObject and the player code doesn’t have to be modified to handle every different type of object, even some you might not have thought about when designing this system.</p>
+<p>This will be solved through <strong>C# inheritance</strong>: a base class CellObject that different objects (<strong>FoodObject</strong>, for example) can inherit from.</p>
+<p>This base type will have a virtual method called <strong>PlayerEntered</strong> that will be called by the player code when the player character enters its cell. That way every subclass can handle what happens when the player character enters a cell (for example, food objects will destroy themselves and increase the food count by a certain amount).</p>
+<p>To add this functionality, follow these instructions:</p>
+<p><strong>1.</strong> In the <strong>Project</strong> window, under the <strong>Assets</strong> folder, right -lick the <strong>Scripts</strong> folder and select <strong>Create</strong> &gt; <strong>Scripting</strong> &gt; <strong>MonoBehaviour Script</strong>. Name it “CellObject” and add a virtual method called “PlayerEntered”.</p>
+<p>The <strong>PlayerEntered</strong> method will be empty in that base class because by default, cell objects do nothing when the player character enters their cell.</p>
+<pre><code class="language-csharp">using UnityEngine;
+public class CellObject:MonoBehaviour
+{
+//Called when the player enter the cell in which that object is
+public virtual void PlayerEntered()
+{
+
+}
+}
+</code></pre>
+<p><strong>2.</strong> In the <strong>Project</strong> window, under the <strong>Assets</strong> folder, right-click the <strong>Scripts</strong> folder and select <strong>Create</strong> &gt; <strong>Scripting</strong> &gt; <strong>MonoBehaviour Script</strong>, and name it “FoodObject”.</p>
+<p><strong>3.</strong> Change the class the <strong>FoodObject</strong> script inherits from <strong>MonoBehaviour</strong> to <strong>CellObject</strong>. You then need to redefine the <strong>PlayerEntered</strong> method so it does a different thing than the base class one. This is called <strong>overriding</strong> the method, and uses the override keyword.</p>
+<pre><code class="language-csharp">using UnityEngine;
+public class FoodObject:CellObject
+{
+public override void PlayerEntered()
+{ 
+Destroy(gameObject);
+//increase food       
+Debug.Log(&quot;Food increased&quot;);
+}
+}
+</code></pre>
+<p>For now, this will just destroy the <strong>FoodObject</strong> GameObject and write something in the console to show it happened. This is enough to test if the code works.</p>
+<p><strong>4.</strong> Replace the GameObject in <strong>CellData</strong> with a <strong>CellObject</strong> in the <strong>BoardManager</strong> script<strong>.</strong></p>
+<pre><code class="language-csharp">public class CellData
+{
+public bool Passable;
+public CellObject ContainedObject;
+}
+</code></pre>
+<p>This will generate a couple of errors in your console you should be able to fix.The fixes are below, but see if you can figure them out for yourself before you look at the solutions!</p>
+<p>Here are the bug fixes:</p>
+<ul>
+<li>Change the <strong>FoodPrefab</strong> type from <strong>GameObject</strong> to <strong>FoodObject</strong> in the <strong>BoardManager script</strong>.</li>
+<li>In the <strong>GenerateFood</strong> method, because you now instantiate a FoodObject, change the <strong>newFood</strong> type from <strong>GameObject</strong> to <strong>FoodObject.</strong></li>
+</ul>
+<p><strong>5.</strong> In your <strong>PlayerController</strong> script, when the player enters a new cell, if it contains an object, call <strong>PlayerEntered</strong> on it:</p>
+<pre><code class="language-csharp">if(hasMoved)
+{
+//check if the new position is passable, then move there if it is. 
+BoardManager.CellData cellData= m_Board.GetCellData(newCellTarget);
+if(cellData!=null&amp;&amp; cellData.Passable)
+{       
+GameManager.Instance.TurnManager.Tick();
+MoveTo(newCellTarget);
+if(cellData.ContainedObject!=null)
+{           
+cellData.ContainedObject.PlayerEntered();
+}
+}
+}
+</code></pre>
+<p>Virtual methods allow you to change the behavior of a method in a subclass. In this case, <strong>CellData</strong> keeps a reference to a <strong>CellObject</strong>, but this reference can point to an object of any subclass of <strong>CellObject</strong> (in this case, <strong>FoodObject</strong>). When you call <strong>PlayerEntered</strong>, the correct overridden method will be automatically called, based on the <strong>actual</strong> type of the stored object. In this case, because <strong>ContainedObject</strong> will actually point to a <strong>FoodObject</strong>, it is its <strong>PlayerEntered</strong> method that will be called, not the empty <strong>CellObject method</strong>.</p>
+<p><strong>6.</strong> Inside the <strong>Prefabs</strong> folder, open the <strong>FoodPrefab</strong> in prefab editing mode by double clicking it.</p>
+<p><strong>7.</strong> Add a <strong>FoodObject</strong> component, then save and exit prefab editing mode.</p>
+<h2 id="56-increasing-the-food-count">5.6 <strong>Increasing the food count</strong></h2>
+<p>So far, the console is only outputting when the player character collects a <strong>Food</strong> GameObject. However, you also need to actually modify the amount of food displayed on the label. This is stored in the <strong>GameManager</strong>, and you have access to it through the <strong>Singleton</strong> instance.</p>
+<ul>
+<li>Create a method in the <strong>GameManager</strong> script that changes the amount of food by a given parameter and name it something like “ChangeFood”. Don’t forget to also update the label when you do so!</li>
+<li>Add a public property on your <strong>FoodObject</strong> so you can define how many food points are given by the <strong>FoodObject</strong> when collected.</li>
+<li>Call the new <strong>GameManager</strong> method in the <strong>PlayerEntered</strong> method on your <strong>FoodObject</strong>.</li>
+</ul>
+<h3 id="in-gamemanager"><strong>In GameManager</strong></h3>
+<pre><code class="language-csharp">void OnTurnHappen() 
+{
+ChangeFood(-1);
+}
+public void ChangeFood(int amount)
+{   
+m_FoodAmount+= amount;   
+m_FoodLabel.text=&quot;Food : &quot;+ m_FoodAmount;
+}
+</code></pre>
+<h3 id="foodobject"><strong>FoodObject</strong></h3>
+<pre><code class="language-csharp">public class FoodObject:CellObject
+{
+public int AmountGranted=10;
+public override void PlayerEntered()
+{
+Destroy(gameObject);
+//increase food       
+GameManager.Instance.ChangeFood(AmountGranted);
+}
+}
+</code></pre>
+<p>Now your food count should change when the player character collects food items! You can play with the amount given by changing the <strong>AmountGranted</strong> property in the <strong>Inspector</strong> window of your <strong>FoodObject</strong> prefab.</p>
+<h1 id="6-add-obstacles">6. Add Obstacles</h1>
+<h2 id="61-add-obstacles">6.1 Add Obstacles</h2>
+<p>There are a couple of sprites that you can use for walls:</p>
+<p><img alt="" src="https://connect-mediagw.unity.com/h1/20240927/learn/images/ab7af444-f199-494a-be1b-097cf57798b3_wall-sprites-1.png" /></p>
+<p>To create and add WallObjects to your game, follow these instructions:</p>
+<p><strong>1.</strong> In the <strong>Hierarchy</strong> window, create an empty GameObject and name it “Wall”.</p>
+<p>Remember, you aren’t using sprites; the CellObject will modify the tilemap.</p>
+<p><strong>2.</strong> In the <strong>Project</strong> window, right click the <strong>Scripts</strong> folder and select <strong>Create</strong> &gt; <strong>Scripting</strong> &gt; <strong>MonoBehaviour Script</strong>, and name it “WallObject”.</p>
+<pre><code class="language-csharp">public class WallObject:CellObject{}
+</code></pre>
+<p><strong>WallObject</strong>, just like <strong>FoodObject</strong>, inherits from CellObject.</p>
+<p><strong>3.</strong> Add the <strong>WallObject</strong> script as a component to the <strong>Wall</strong> GameObject, click and drag the <strong>Wall</strong> GameObject into your <strong>Prefabs</strong> folder, then delete the <strong>Wall</strong> GameObject from the scene.</p>
+<p><strong>4.</strong> Add a public variable of type <strong>WallObject</strong> called “WallPrefab” to your <strong>BoardManager</strong> and create a new <strong>GenerateWall</strong> function that will be very similar to your <strong>GenerateFood</strong> function.</p>
+<p>The <strong>GenerateWall</strong> function will spawn a certain number of walls in the level.</p>
+<pre><code class="language-csharp">voidGenerateWall()
+{
+int wallCount= Random.Range(6,10);
+for(int i=0; i&lt; wallCount;++i)
+{
+int randomIndex= Random.Range(0, m_EmptyCellsList.Count);
+Vector2Int coord= m_EmptyCellsList[randomIndex];
+       m_EmptyCellsList.RemoveAt(randomIndex);
+       CellData data= m_BoardData[coord.x, coord.y];
+       WallObject newWall=Instantiate(WallPrefab);
+       newWall.transform.position=CellToWorld(coord);
+       data.ContainedObject= newWall;
+       }
+       }
+</code></pre>
+<p><strong>5.</strong> Call the above <strong>GenerateWall</strong> method inside the <strong>Init</strong> method, before the call to the <strong>GenerateFood</strong> function.</p>
+<pre><code class="language-csharp">publicvoidInit()
+{...
+(allcode above)GenerateWal();
+// new line
+GenerateFood();
+}
+</code></pre>
+<p>This way all the cells that will generate walls will be removed from the empty cell list and food won’t be able to generate there.</p>
+<p>In the Editor, assign your WallPrefab to the WallPrefab slot on your BoardManager and if you enter Play mode now, because the <strong>WallObjects</strong> class is empty. Even if the walls aren’t visible, by using the <strong>Scene</strong> view and <strong>Hierarchy</strong> window, you can check that the generating code works before going to the next step.`</p>
+<p>The <strong>Wall</strong> GameObject will need to do two things that CellObject can’t do for now:</p>
+<ul>
+<li>Change the tile sprite it's placed on to a wall sprite.</li>
+<li>Stop the player character from entering a cell.</li>
+</ul>
+<p>The goal is for the code to perform an action when the <strong>CellObject</strong> is placed over a cell. This seems like something that you might want to do with other CellObjects, not only walls. So it’ll be beneficial to add a new virtual function to <strong>CellObject</strong> that’s called after the object is placed. This function will also need to know the cell it’s placed on.</p>
+<p>We can combine all these requirements into an <strong>Init</strong> virtual function that takes a <strong>Vector2Int</strong> storing the coordinate of the cell it’s placed on.</p>
+<pre><code class="language-csharp">public class CellObject:MonoBehaviour
+{
+protected Vector2Int m_Cell;
+public virtual void Init(Vector2Int cell)
+{       
+m_Cell= cell;
+}
+public virtual void PlayerEntered()
+{
+
+}
+}
+</code></pre>
+<p><strong>Note</strong>: <strong>m_Cell</strong> is protected<strong>,</strong> not private. <strong>Private</strong> would make it inaccessible to the subclasses of <strong>CellObject</strong> like <strong>FoodObject</strong> or <strong>WallObject</strong>. Instead, <strong>protected</strong> will let other subclasses like <strong>WallObject</strong> access it, while still hiding it from other unrelated classes.</p>
+<p><strong>6.</strong> Update the <strong>GenerateWall</strong> function in the <strong>BoardManager</strong> script to the following, calling <strong>Init</strong> just after instantiating the new Wall:</p>
+<pre><code class="language-csharp">void GenerateWall()
+{
+int wallCount= Random.Range(6,10);
+for(int i=0; i&lt; wallCount;++i)
+{
+int randomIndex= Random.Range(0, m_EmptyCellsList.Count);
+Vector2Int coord= m_EmptyCellsList[randomIndex];
+       m_EmptyCellsList.RemoveAt(randomIndex);
+       CellData data= m_BoardData[coord.x, coord.y];
+       WallObject newWall=Instantiate(WallPrefab);
+//init the wall       
+newWall.Init(coord);
+       newWall.transform.position=CellToWorld(coord);
+       data.ContainedObject= newWall;}}
+</code></pre>
+<p><strong>7.</strong> Add the following new method to <strong>BoardManager</strong>:</p>
+<pre><code class="language-csharp">public void SetCellTile(Vector2Int cellIndex,Tile tile)
+{   
+m_Tilemap.SetTile(newVector3Int(cellIndex.x, cellIndex.y,0), tile);
+}
+</code></pre>
+<p><strong>8.</strong> Add the following code to your script:</p>
+<pre><code class="language-csharp">using UnityEngine;
+using UnityEngine.Tilemaps;
+public class WallObject:CellObject
+{
+public Tile ObstacleTile;
+public override void Init(Vector2Int cell)
+{
+base.Init(cell);       
+GameManager.Instance.BoardManager.SetCellTile(cell, ObstacleTile);
+}
+}
+</code></pre>
+<p><strong>9.</strong> Save your scripts. Select the Wall prefab and, in the <strong>Inspector</strong> window, assign the tile you want to use to the <strong>Obstacle Tile</strong> slot.</p>
+<p><img alt="" src="https://connect-mediagw.unity.com/h1/20240927/learn/images/7823f650-9045-4a1f-b388-bfe40646d3ae_game-view-walls.png" /></p>
+<p>However, the player character can still move on top of the walls. This is because right now the walls just change the tilemap tile when initialized. To stop the player character from moving on top of the walls, you can change the <strong>Passable</strong> property of the <strong>CellData</strong> to <strong>false</strong> in the <strong>Init</strong> code of the <strong>WallObject</strong>.</p>
+<p>A new virtual <strong>PlayerWantsToEnter</strong> method in <strong>CellObject</strong> can serve this purpose. The player character movement code calls this method on the object in a cell when the player character tries to move there, and this method either returns true if the player character can enter the cell (like for <strong>FoodObject</strong>) or cannot (like for <strong>WallObject</strong>):</p>
+<pre><code class="language-csharp">public virtual bool layerWantsToEnter()
+{
+return true;
+}
+</code></pre>
+<p>Then you can use that new method by modifying the code in the <strong>if(haseMoved)</strong> condition from the <strong>Update</strong> function of the <strong>PlayerController</strong>:</p>
+<pre><code class="language-csharp">if(cellData!=null&amp;&amp; cellData.Passable)
+{
+   GameManager.Instance.TurnManager.Tick();
+if(cellData.ContainedObject==null)
+{
+MoveTo(newCellTarget);
+}
+else if(cellData.ContainedObject.PlayerWantsToEnter())
+{
+MoveTo(newCellTarget);
+//Call PlayerEntered AFTER moving the player, Otherwise not in cell yet       
+cellData.ContainedObject.PlayerEntered();
+}
+}
+</code></pre>
+<p>Let’s take a closer look at the lines of code above:</p>
+<ul>
+<li>If a cell is passable the game ticks once (bumping into an object counts as a tick, but not being able to enter a cell like an outer wall or non destructible wall doesn’t).</li>
+<li>Then, a conditional block will run a couple of checks:<ul>
+<li>If the cell the player is trying to move to doesn’t have a cell object, the player character can move to that cell.</li>
+<li>If the cell has a cell object, it will call <strong>PlayerWantsToEnter</strong> on that cell object and if that returns <strong>true</strong>, then the player character can enter.</li>
+</ul>
+</li>
+</ul>
+<pre><code class="language-csharp">publicclassWallObject:CellObject{publicTile ObstacleTile;
+publicoverridevoidInit(Vector2Int cell){base.Init(cell);       GameManager.Instance.BoardManager.SetCellTile(cell, ObstacleTile);}
+publicoverrideboolPlayerWantsToEnter(){returnfalse;}}
+</code></pre>
+<p>Now if you enter Play mode, your newly placed wall should stop the player character from moving to the cell.</p>
+<h2 id="62-refactoring">6.2 Refactoring</h2>
+<pre><code class="language-csharp">void AddObject(CellObject obj,Vector2Int coord)
+{
+CellData data= m_BoardData[coord.x, coord.y];   
+obj.transform.position=CellToWorld(coord);   
+data.ContainedObject= obj;   
+obj.Init(coord);
+}
+</code></pre>
+<pre><code class="language-csharp">void GenerateWall()
+{
+int wallCount= Random.Range(6,10);
+for(int i=0; i&lt; wallCount;++i)
+{
+int randomIndex= Random.Range(0, m_EmptyCellsList.Count);
+Vector2Int coord= m_EmptyCellsList[randomIndex];
+       m_EmptyCellsList.RemoveAt(randomIndex);
+       WallObject newWall=Instantiate(WallPrefab);
+       AddObject(newWall, coord);
+       }
+       }
+void GenerateFood()
+{
+int foodCount=5;
+for(int i=0; i&lt; foodCount;++i)
+{
+int randomIndex= Random.Range(0, m_EmptyCellsList.Count);
+Vector2Int coord= m_EmptyCellsList[randomIndex];
+       m_EmptyCellsList.RemoveAt(randomIndex);
+       FoodObject newFood=Instantiate(FoodPrefab);
+       AddObject(newFood, coord);
+       }
+       }
+</code></pre>
+<h2 id="63-damaging-walls">6.3 <strong>Damaging walls</strong></h2>
+<p>Currently when the player bumps into a wall cell, they won't be able to move, but the food counter will decrease as bumping is taken as a turn. So, let’s add the functionality of damaging walls.</p>
+<ul>
+<li>Create a new counter variable in <strong>WallObject</strong> that stores the hitpoint count of that wall.</li>
+<li>Save the original tile in that cell during <strong>Init</strong> before it’s replaced with the wall tile (so you can set it back after the wall is destroyed). This will require you to add a new function in <strong>BoardManager</strong> just like we did for <strong>SetCellTile</strong>!</li>
+<li>When the <strong>PlayerWantToEnter</strong> function is called in <strong>WallObject</strong>, reduce the hit point counter by 1, and when the hit points reach 0, the <strong>WallObject</strong> is destroyed, and the wall tile is removed and is set back to the original tile.</li>
+</ul>
+<h3 id="wallobject"><strong>WallObject</strong></h3>
+<pre><code class="language-csharp">public class WallObject:CellObject
+{
+public Tile ObstacleTile;
+public int MaxHealth=3;
+private int m_HealthPoint;
+private Tile m_OriginalTile;
+public override void Init(Vector2Int cell)
+{
+base.Init(cell);
+       m_HealthPoint= MaxHealth;
+       m_OriginalTile= GameManager.Instance.BoardManager.GetCellTile(cell);       
+       GameManager.Instance.BoardManager.SetCellTile(cell, ObstacleTile);
+       }
+public override bool PlayerWantsToEnter()
+{
+       m_HealthPoint-=1;
+if(m_HealthPoint&gt;0)
+{
+return false;
+}
+       GameManager.Instance.BoardManager.SetCellTile(m_Cell, m_OriginalTile);
+       Destroy(gameObject);
+       return true;
+       }
+       }
+</code></pre>
+<h3 id="boardmanager_1"><strong>BoardManager</strong></h3>
+<pre><code class="language-csharp">public Tile GetCellTile(Vector2Int cellIndex)
+{
+return m_Tilemap.GetTile&lt;Tile&gt;(newVector3Int(cellIndex.x,cellIndex.y,0))
+;
+}
+</code></pre>
+<h1 id="7-add-win-and-loose-conditions">7.  Add Win and Loose conditions</h1>
+<h2 id="71-finishing-a-level">7.1 Finishing A level</h2>
+<p>Let’s start by writing a new type of <strong>CellObject</strong>, <strong>ExitCellObject</strong>, that sets the tile to an exit tile (so the player knows where the exit is) and reacts to the player character entering that cell by generating a new level.</p>
+<p>To do this, you’ll need to do the following:</p>
+<ul>
+<li>Create a new <strong>ExitCellObject</strong> subclass that inherits from <strong>CellObject</strong>.</li>
+<li>Create a new exit tile (there’s an exit sign sprite you can use for this).</li>
+<li>Give the exit tile as a public reference to your new <strong>ExitCellObject</strong>.</li>
+<li>Create a prefab of this new type of <strong>CellObject</strong>.</li>
+<li>Give that prefab as a new public reference to your <strong>BoardManager</strong> so it can add the object to the exit cell (Use the upper-right empty cell as the exit position).</li>
+</ul>
+<pre><code class="language-csharp">using UnityEngine;
+using UnityEngine.Tilemaps;
+public class ExitCellObject:CellObject
+{
+public Tile EndTile;
+public override void Init(Vector2Int coord)
+{
+base.Init(coord);       
+GameManager.Instance.BoardManager.SetCellTile(coord, EndTile);
+}
+publicoverridevoidPlayerEntered()
+{       
+Debug.Log(&quot;Reached the exit cell&quot;);
+}
+}
+</code></pre>
+<p><strong>1.</strong> Add a new empty GameObject to your scene, rename it “ExitCell”, and add the above script to it.</p>
+<p><strong>2.</strong> In the <strong>Inspector</strong> window, assign the tile asset you want to use for your exit to the <strong>EndTile</strong> property, then create a prefab of this <strong>ExitCell</strong> GameObject and delete it from the scene.</p>
+<p><strong>3.</strong> Add a reference to the ExitCell prefab in your <strong>BoardManager</strong> and spawn that GameObject in the upper-right corner (at the opposite end of the player character’s starting position) during the level creation phase.</p>
+<p><strong>4.</strong> Inside the <strong>Init</strong> function, after the <strong>for</strong> loops that generate the board, add the following code:</p>
+<pre><code class="language-csharp">public class BoardManager:MonoBehaviour
+{
+public Exit CellObject ExitCellPrefab;
+...
+publicvoidInit()
+{
+...for(int y=0; y&lt; Height;++y)
+{...
+}
+   m_EmptyCellsList.Remove(newVector2Int(1,1));
+Vector2Int endCoord=newVector2Int(Width-2, Height-2);
+AddObject(Instantiate(ExitCellPrefab), endCoord);   
+m_EmptyCellsList.Remove(endCoord);
+GateWall();GenerateFood();
+ }
+</code></pre>
+<p><img alt="" src="https://connect-mediagw.unity.com/h1/20240927/learn/images/9d46d683-a30d-4fc9-88f6-9827dbe97bc2_game-view-exit.png" /></p>
+<h3 id="72-generating-a-new-level"><strong>7.2 Generating a new level</strong></h3>
+<ul>
+<li><strong>BoardManager</strong> will need a new function that cleans the current level. This means going over every cell, removing their tile from the tilemap, deleting the data saved inside them and destroying their CellObject.</li>
+<li><strong>GameManager</strong> will need a <strong>NewLevel</strong> function that will clean the current board, create a new one, and spawn the player character at the start of this new board.</li>
+</ul>
+<h3 id="boardmanager_2"><strong>BoardManager</strong></h3>
+<pre><code class="language-csharp">public void Clean()
+{
+//no board data, so exit early, nothing to clean
+if(m_BoardData==null)
+return;
+
+for(int y=0; y&lt; Height;++y)
+{
+for(int x=0; x&lt; Width;++x)
+{
+var cellData= m_BoardData[x, y];
+if(cellData.ContainedObject!=null)
+{
+//CAREFUL! Destroy the GameObject NOT just cellData.ContainedObject
+//Otherwise what you are destroying is the JUST CellObject COMPONENT
+//and not the whole gameobject with sprite
+Destroy(cellData.ContainedObject.gameObject);
+}
+SetCellTile(newVector2Int(x,y),null);
+}
+}
+}
+</code></pre>
+<h3 id="gamemanager_1"><strong>GameManager</strong></h3>
+<pre><code class="language-csharp">private int m_CurrentLevel=1;
+...voidStart()
+{   
+TurnManager=newTurnManager();   
+TurnManager.OnTick+= OnTurnHappen;
+NewLevel();
+   m_FoodLabel= UIDoc.rootVisualElement.Q&lt;Label&gt;(&quot;FoodLabel&quot;);   
+   m_FoodLabel.text=&quot;Food : &quot;+ m_FoodAmount;
+   }
+public void NewLevel()
+{   
+BoardManager.Clean();   
+BoardManager.Init();   
+PlayerController.Spawn(BoardManager,newVector2Int(1,1));
+   m_CurrentLevel++;
+   }
+</code></pre>
+<h3 id="exitcellobject"><strong>ExitCellObject</strong></h3>
+<pre><code class="language-csharp">public override void PlayerEntered()
+{
+   GameManager.Instance.NewLevel();
+   }
+</code></pre>
+<h2 id="73-game-over">7.3 Game Over</h2>
+<p>For your game to have an ending, let’s add a <strong>Game Over</strong> state to the game. This will occur when the food count reaches 0. After that, this is what needs to happen:</p>
+<ol>
+<li>The UI text display will need to change to a GameOver message that shows how many levels the player survived before running out of food.</li>
+<li>The game will need to be set to a <strong>Game</strong> <strong>Over</strong> state that disables reading input so the user can’t move the player character anymore.</li>
+<li>The whole game will need to restart at level 1 when a certain key is pressed to create a game loop.</li>
+</ol>
+<p>Let’s start with the UI game over message, which will consist of a semi transparent background that darkens the screen and a text in the middle that shows the number of completed levels:</p>
+<p><strong>1.</strong> In the <strong>UI</strong> folder of the <strong>Project</strong> window, double click the uxml document <strong>GameUI</strong> to open the <strong>UI builder</strong> window.</p>
+<p><strong>2.</strong> In the <strong>Library</strong> window, in the <strong>Containers</strong> section, click and drag a <strong>VisualElement</strong> into the <strong>Hierarchy</strong> window and rename it “GameOverPanel”.</p>
+<p>Make sure it’s placed below after the <strong>FoodLabel</strong> in the <strong>Hierarchy</strong> window, as objects are rendered from top to bottom, so being below after <strong>FoodLabel</strong> means it will be rendered above the <strong>FoodLabel</strong>.</p>
+<p><img alt="" src="https://connect-mediagw.unity.com/h1/20240927/learn/images/dd0ecf0f-0271-474d-9747-1ae230015db0_game-over-panel.png" /></p>
+<p><strong>3.</strong> With the <strong>GameOverPanel</strong> Element selected, use the foldout (triangle) to expand the <strong>Position</strong> section in the <strong>Inspector</strong> window, then open the <strong>Position Mode</strong> dropdown and select <strong>Absolute</strong> and set the <strong>Top</strong>, <strong>Right</strong>, <strong>Bottom</strong> and <strong>Left</strong> offsets to <strong>0</strong>, to make sure it covers the entire screen.</p>
+<p>You don’t want the <strong>GameOverPanel</strong> Element to be part of the layout, you want it to be over everything.</p>
+<p><img alt="" src="https://connect-mediagw.unity.com/h1/20240927/learn/images/e4f7e751-b6c7-4567-bf97-6fbfb5bb734e_game-over-panel-anchors.png" /></p>
+<p><strong>4.</strong> Use the foldout (triangle) to expand the <strong>Background</strong> section and set the <strong>Color</strong> to black (<strong>000000</strong>) but with an <strong>alpha</strong> (<strong>A</strong>) value of ~<strong>200</strong>.</p>
+<p><img alt="" src="https://connect-mediagw.unity.com/h1/20240927/learn/images/6167f056-af5d-4558-88b8-de6ff2329871_background-color-wheel.png" /></p>
+<p><strong>5.</strong> In the <strong>Library</strong> window, in the <strong>Controls</strong> section, click and drag a <strong>Label</strong> into the <strong>Hierarchy</strong> directly on top of the <strong>GameOverPanel</strong> Element , then rename that <strong>Label</strong> Element “GameOverMessage”.</p>
+<p><img alt="" src="https://connect-mediagw.unity.com/h1/20250820/learn/images/33953bc5-6eb9-45cd-82d2-9d3e03245eff_Untitled_44.png" /></p>
+<p><strong>6.</strong> With <strong>GameOverMessage</strong> selected, use the foldout (triangle) to expand the <strong>Attributes</strong> section and set the <strong>Text</strong> property to “Game Over”. Then use the foldout (triangle) to expand the <strong>Inlined</strong> <strong>Styles</strong> section, then the <strong>Text</strong> section and change the <strong>Font</strong>, <strong>Size</strong>, and <strong>Color</strong> of the text to make it visible on the dark background.</p>
+<p>The Game Over <strong>Text</strong> property is a placeholder to help you design its look; the real message will be written through code when a game over event happens.</p>
+<p><img alt="" src="https://connect-mediagw.unity.com/h1/20240927/learn/images/c7899b96-2558-4101-8599-1b4c1362d3df_text-game-over-panel.png" /></p>
+<p><strong>7.</strong> Select the <strong>GameOverPanel</strong> GameObject and use the foldout (triangle) to expand the <strong>Inlined</strong> <strong>Styles</strong> section, then the <strong>Align</strong> section in the <strong>Inspector</strong> window. Set the <strong>Align Items</strong> property to <strong>center</strong> and the <strong>Justify Content</strong> property to <strong>space-around</strong>.</p>
+<p><img alt="" src="https://connect-mediagw.unity.com/h1/20240927/learn/images/7ff4259d-d499-463f-a496-c88768465664_align-styles.png" /></p>
+<ul>
+<li>One of type <strong>VisualElement</strong>, to store the reference to the <strong>GameOverPanel</strong> Element.</li>
+<li>One of type <strong>Label</strong> to store a reference to the <strong>GameOverMessage</strong> Element so you can update it when the <strong>GameOver</strong> condition happens.</li>
+</ul>
+<pre><code class="language-csharp">private VisualElement 
+m_GameOverPanel;
+private Label m_GameOverMessage;
+</code></pre>
+<p><strong>8.</strong> In the <strong>Start</strong> function of the <strong>GameManager,</strong> you need to retrieve The <strong>GameOverPanel</strong> VisualElement and the <strong>GameOverMessage</strong> Label from the <strong>UI Document</strong> root <strong>VisualElement</strong> and set the visibility of the panel to <strong>Hidden</strong>:</p>
+<pre><code class="language-csharp">m_GameOverPanel= UIDoc.rootVisualElement.Q&lt;VisualElement&gt;(&quot;GameOverPanel&quot;);
+m_GameOverMessage= m_GameOverPanel.Q&lt;Label&gt;(&quot;GameOverMessage&quot;);
+m_GameOverPanel.style.visibility= Visibility.Hidden;
+</code></pre>
+<p><strong>9.</strong> In the <strong>ChangeFood</strong> function of the <strong>GameManager</strong>, you need to test if the food Amount is 0 or less. If it is, this is the Game Over condition, which means you need to set the visibility of the <strong>GameOverPanel</strong> GameObject to <strong>Visible</strong> and display the message with the number of completed levels.</p>
+<pre><code class="language-csharp">public void ChangeFood(int amount) 
+{  
+ m_FoodAmount+= amount;   
+ m_FoodLabel.text=&quot;Food : &quot;+ m_FoodAmount;
+if(m_FoodAmount&lt;=0)
+{       
+m_GameOverPanel.style.visibility= Visibility.Visible;      
+m_GameOverMessage.text=&quot;Game Over!\n\nYou traveled through &quot;+ m_CurrentLevel+&quot; levels&quot;;
+}
+}
+</code></pre>
+<h3 id="game-over-state"><strong>Game Over state</strong></h3>
+<ol>
+<li>Create a bool variable in the <strong>PlayerController</strong> that stores whether the player character is in a <strong>Game</strong> <strong>Over</strong> state or not.</li>
+<li>Early exit the <strong>Update</strong> function to disable input handling. Make the <strong>GameManager</strong> have a reference to the <strong>Player Controller</strong> script so it can easily call functions on it.</li>
+</ol>
+<h3 id="playercontroller"><strong>PlayerController</strong></h3>
+<pre><code class="language-csharp">using UnityEngine;
+using UnityEngine.InputSystem;
+public class PlayerController:MonoBehaviour
+{
+privatebool m_IsGameOver;
+...
+publicvoidGameOver()
+{   
+m_IsGameOver=true;
+}
+...
+private void Update()
+{
+if(m_IsGameOver)
+{
+return;
+}...}
+</code></pre>
+<h3 id="gamemanager_2"><strong>GameManager</strong></h3>
+<pre><code class="language-csharp">public void ChangeFood(int amount) 
+{     
+m_FoodAmount+= amount;     
+m_FoodLabel.text=&quot;Food : &quot;+ m_FoodAmount;
+if(m_FoodAmount&lt;=0)
+{         
+PlayerController.GameOver();         
+m_GameOverPanel.style.visibility= Visibility.Visible;         
+m_GameOverMessage.text=&quot;Game Over!\n\nSurvived &quot;+ m_CurrentLevel+&quot; days&quot;;
+}
+}
+</code></pre>
+<ol>
+<li>Move the part of the <strong>Start</strong> function in the <strong>GameManager</strong> that handles initializing the game into a new function called <strong>StartNewGame</strong>.</li>
+</ol>
+<p>Things like getting references to UI elements or creating new objects like the <strong>TurnManager</strong> only needs to happen once when the game is launched, not every new game, and can be left in the <strong>Start</strong> function.</p>
+<ol>
+<li>The <strong>PlayerController</strong> needs to check if the <strong>Enter</strong> key is pressed only during game over, and if it's pressed it starts a new game.</li>
+</ol>
+<h3 id="gamemanager_3"><strong>GameManager</strong></h3>
+<pre><code class="language-csharp">void Start()
+{   
+TurnManager=newTurnManager();   
+TurnManager.OnTick+= OnTurnHappen;
+   m_FoodLabel= UIDoc.rootVisualElement.Q&lt;Label&gt;(&quot;FoodLabel&quot;);
+   m_GameOverPanel= UIDoc.rootVisualElement.Q&lt;VisualElement&gt;(&quot;GameOverPanel&quot;);   
+   m_GameOverMessage= m_GameOverPanel.Q&lt;Label&gt;(&quot;GameOverMessage&quot;);
+Start NewGame();
+}
+public void Start NewGame()
+{   
+m_GameOverPanel.style.visibility= Visibility.Hidden;
+   m_CurrentLevel=1;   
+   m_FoodAmount=20;   
+   m_FoodLabel.text=&quot;Food : &quot;+ m_FoodAmount;
+  BoardManager.Clean();   
+  BoardManager.Init();
+   PlayerController.Init();   
+   PlayerController.Spawn(BoardManager,newVector2Int(1,1));
+   } 
+</code></pre>
+<ul>
+<li>Hiding the GameOver message.</li>
+<li>Setting the level back to 1 at the start.</li>
+<li>Setting the starting food value (before it was only set through the default value, which would not be reset when just calling that function).</li>
+<li>Initializing the board.</li>
+<li>Initializing the player character and spawning it.</li>
+</ul>
+<h3 id="playercontroller_1"><strong>PlayerController</strong></h3>
+<pre><code class="language-csharp">public void Init()
+{   
+m_IsGameOver=false;
+}
+private void Update()
+{
+if(m_IsGameOver)
+{
+if(Keyboard.current.enterKey.wasPressedThisFrame)
+{           
+GameManager.Instance.StartNewGame();
+}
+return;
+}
+...}
+</code></pre>
+<h2 id="8-animation">8. Animation</h2>
+<p>To add some life into the game, let’s add some animations to it! Animations can not only increase player experience by adding visual interest to your game, but they also help bring a higher level of polish and professionalism to applications.</p>
+<h2 id="81-idle-animation">8.1 Idle animation</h2>
+<p><strong>1.</strong> In the <strong>Hierarchy</strong> window, select the <strong>PlayerCharacter</strong> GameObject and, in the <strong>Inspector</strong> window, add an <strong>Animator</strong> component to it.</p>
+<p><strong>2.</strong> In the <strong>Project</strong> window, right click the <strong>Assets</strong> folder, select <strong>Create</strong> &gt; <strong>Folder</strong>, and name the new folder “Animation”.</p>
+<p><strong>3.</strong> Right click inside the <strong>Animation</strong> folder and select <strong>Create</strong> &gt; <strong>Animation</strong> &gt; <strong>AnimatorController</strong> to add an AnimatorController, then name it “PlayerAnimator”.</p>
+<p><strong>4.</strong> In the <strong>Hierarchy</strong> window, select the <strong>PlayerCharater</strong> GameObject. In the <strong>Inspector</strong> window, under the Animator component, select the <strong>Controller</strong> property picker (⊙) and select <strong>PlayerAnimator</strong>.</p>
+<p><img alt="" src="https://connect-mediagw.unity.com/h1/20240927/learn/images/01184024-7119-4097-901b-be21248a2e85_animator-controller.png" /></p>
+<p><strong>5.</strong> From the main menu, select <strong>Window</strong> &gt; <strong>Animation</strong> &gt; <strong>Animation</strong> to open the <strong>Animation</strong> window.</p>
+<p>Before you can continue, the <strong>Animation</strong> window will ask to create an Animation Clip.</p>
+<p><strong>6.</strong> Select the <strong>Create</strong> button and save the new clip as “Idle.anim” inside your <strong>Animation</strong> folder.</p>
+<p>This tutorial won't go into detail about how everything works and will only cover how to create animations and handle them, but feel free to check the <a href="https://learn.unity.com/course/2d-beginner-adventure-game">2D Adventure Game</a> again for more in depth information.</p>
+<p><strong>7.</strong> From the <strong>Sprites</strong> folder in the <strong>Project</strong> window (<strong>Roguelike2D</strong> &gt; <strong>TutorialAssets</strong> &gt; <strong>Sprites</strong>), drag and drop all the sprites you want to use for the idle animation one after the other into the timeline of the <strong>Animation</strong> window to add them as new keyframes.</p>
+<p>Place the sprites at the same interval from each other to keep a constant speed.</p>
+<p><img alt="" src="https://connect-mediagw.unity.com/h1/20241010/learn/images/df64ef85-fb70-42cc-9f00-0ce8f287d87f_image23.png" /></p>
+<p>If you select the <strong>Play</strong> button in the <strong>Animation</strong> window now, you will see a preview in the <strong>Scene</strong> view of the animation on your <strong>PlayerCharacter</strong> GameObject. If you placed the sprites like in the example, the animation will probably look really fast.</p>
+<p>The number at the top of the timeline is composed of the following parts:</p>
+<ul>
+<li>The number on the left of the colon (:) is the current time in seconds of the animation.</li>
+<li>The number on the right of the colon (:) is the frame number of that specific second.</li>
+</ul>
+<p>So 0:15 means the 15th frame of second 0 of the animation, and 3:40 means the 40th frame of second 3 of the animation.</p>
+<p>Right now the animation has 60 frames in 1 second, so you can see that the number goes up to 0:59 before changing to 1:00</p>
+<p>To slow the animation down, you can move each sprite individually to a frame later in the animation, but it’s wasteful to have 60 possible frames in a second when this animation is only a couple of frames long. Instead, let’s change the number of frames per second.</p>
+<p>For example, if your animation is six frames long, setting the sample rate to be three frames per second means the animation will last two seconds.</p>
+<p><strong>8.</strong> Open the <strong>More</strong> (<strong>⋮</strong>) menu next to the timeline and select <strong>Show Sample Rate</strong>, then change the <strong>Samples</strong> property on the left to roughly half of you number of frames (in our examples three).</p>
+<p>As usual, feel free to experiment with different values!e timeline and select <strong>Show Sample Rate</strong>, then change the <strong>Samples</strong> property on the left to <strong>3</strong>.</p>
+<p><img alt="" src="https://connect-mediagw.unity.com/h1/20240927/learn/images/be8f6176-125d-4f27-a40c-949474fc374a_show-sample-rate.png" /></p>
+<p>You’ll then need to re-arrange the sprites because the way the system automatically moves them when you change the sample rate will probably result in a very slow animation. Zoom out of the timeline and move each frame until they are on consecutive frames.</p>
+<h2 id="82-walking-animation">8.2 Walking animation</h2>
+<p>Now you can add a new animation for when the player is walking between cells:</p>
+<p><strong>1.</strong> In the <strong>Animation</strong> window, with your <strong>PlayerCharacter</strong> GameObject still selected, open the <strong>Idle</strong> dropdown and select <strong>Create New Clip…</strong>.</p>
+<p><img alt="" src="https://connect-mediagw.unity.com/h1/20240927/learn/images/6db24733-0f8b-440f-b974-2038be8471c6_create-new-animation-clip.png" /></p>
+<p><strong>2.</strong> Name that new clip “Walk.anim” and save it in the <strong>Animation</strong> folder.</p>
+<p><strong>3.</strong> From the <strong>Sprites</strong> folder in the <strong>Project</strong> window, drag and drop the walking animation sprites into the timeline of the <strong>Animator</strong> window and edit the frame position or frame rate to make it look pleasing to you.</p>
+<p>Your walking animation timeline should look something like this:</p>
+<p><img alt="" src="https://connect-mediagw.unity.com/h1/20241010/learn/images/90f0cc86-c82e-4bb7-8418-d7eb28c4d741_adjusting-timestamps.png" /></p>
+<p>Use the same technique as above to change the sample rate to something that makes the walk of your character look good to you.</p>
+<p>Once the animation is created, you now need a way to trigger it only when the player character is walking. To do this, you’ll use a new tool called an Animation State Machine.</p>
+<p><strong>4.</strong> From the main menu, select <strong>Window</strong> &gt; <strong>Animation</strong> &gt; <strong>Animator</strong> to open the <strong>Animator</strong> window.</p>
+<p>It should contain a state for the two animations you created. If they don’t appear there because you created the animation differently, simply drag and drop your animation clip from the <strong>Project</strong> window to the <strong>Animator</strong> window to add them.</p>
+<p><img alt="" src="https://connect-mediagw.unity.com/h1/20240927/learn/images/f84b7471-534d-47d9-b1e1-739c32d1fee2_animation-desicion-tree.png" /></p>
+<p><strong>5.</strong> Select the <strong>Parameters</strong> tab in the <strong>Animator</strong> window, select the <strong>Add</strong> (<strong>+</strong>) button, select <strong>Bool</strong>, and rename it “Moving”.</p>
+<p><img alt="" src="https://connect-mediagw.unity.com/h1/20240930/learn/images/5c98a2ec-7068-45df-87e6-7c4e6ca4347d_animator-parameters.png" /></p>
+<p>You’ll use this new parameter as a trigger to create a transition from the <strong>Idle</strong> to the <strong>Walk</strong> state when the <strong>Moving</strong> boolean is <strong>true</strong>.</p>
+<p><strong>6.</strong> Right click the <strong>Idle</strong> state and select <strong>Make Transition</strong>.</p>
+<p>An arrow starting from the <strong>Idle</strong> state will appear.</p>
+<p><strong>7.</strong> Select the <strong>Walk</strong> state to create a transition between the <strong>Idle</strong> and <strong>Walk</strong> states.</p>
+<p><strong>8.</strong> Select the transition arrow to display its settings in the <strong>Inspector</strong> window, then disable the <strong>Has Exit Time</strong> checkbox.</p>
+<p>If <strong>Has Exit Time</strong> is enabled, then the transition from <strong>Idle</strong> to <strong>Walk</strong> would happen as soon as this time has elapsed. This is not what you want; you want <strong>Idle</strong> to loop until the <strong>Moving</strong> boolean is true, so disabling <strong>Has Exit Time</strong> makes the animation loop.</p>
+<p><strong>9.</strong> Use the foldout (triangle) to expand the <strong>Settings</strong> section and set the <strong>Transition Duration</strong> property to <strong>0</strong>.</p>
+<p>This time allows the gradual blending from one animation to another, but blending animations doesn’t make sense in 2D applications because you want to immediately switch from one state to the other.</p>
+<p><strong>10.</strong> At the bottom of the <strong>Inspector</strong> window, under the <strong>Conditions</strong> section, select the <strong>Add</strong> (<strong>+</strong>) button to add a new condition. Open the leftmost dropdown, select <strong>Moving</strong>, then open the rightmost dropdown and select <strong>true</strong>.</p>
+<p>This tells the controller that when the <strong>Moving</strong> parameter is set to <strong>true</strong>, it needs to change the animation from <strong>Idle</strong> to <strong>Walk</strong>.</p>
+<p><img alt="" src="https://connect-mediagw.unity.com/h1/20240927/learn/images/0d302fff-ca27-4ae6-9689-a6532f7d825d_animation-transitions.png" /></p>
+<p>Repeat the above steps, but this time start with from the <strong>Walk</strong> to the <strong>Idle</strong> animation. This time the transition will be triggered when <strong>Moving</strong> is set back to <strong>false</strong>.</p>
+<ul>
+<li>Create a private variable of type <strong>Animator</strong> to store the Animator Controller component.</li>
+<li>Add an <strong>Awake</strong> function that will retrieve the <strong>Animator</strong> component using <strong>GetComponent</strong>.</li>
+<li>Everywhere inside code where you alter the <strong>IsMoving</strong> variable, you need to also call the function <strong>SetBool</strong> on the Animator component’s <strong>Moving</strong> bool.</li>
+</ul>
+<pre><code class="language-csharp">public class PlayerController:MonoBehaviour{...
+private Animator m_Animator;
+private void Awake()
+{       
+m_Animator=GetComponent&lt;Animator&gt;();
+}...
+public void MoveTo(Vector2Int cell,bool immediate)
+{       
+m_CellPosition= cell;
+if(immediate)
+{           
+m_IsMoving=false;           
+transform.position= m_Board.CellToWorld(m_CellPosition);
+}
+else
+{           
+m_IsMoving=true;           
+m_MoveTarget= m_Board.CellToWorld(m_CellPosition);
+}
+m_Animator.SetBool(&quot;Moving&quot;, m_IsMoving);
+}
+private void Update()
+{
+...
+if(m_IsMoving)
+{           
+transform.position= Vector3.MoveTowards(transform.position, m_MoveTarget, MoveSpeed* Time.deltaTime);
+if(transform.position== m_MoveTarget)
+{               
+m_IsMoving=false;               
+m_Animator.SetBool(&quot;Moving&quot;,false);
+var cellData= m_Board.GetCellData(m_CellPosition);
+if(cellData.ContainedObject!=null)                   
+cellData.ContainedObject.PlayerEntered();
+}
+return;
+}
+</code></pre>
+<p><strong>Note:</strong> String base lookup on the Animator component is inefficient, and the efficient way is to store a reference to the Hash of <strong>Moving</strong> with the <strong>Animator.StringToHash</strong> function.</p>
+<h1 id="9-adding-an-enemy">9. Adding an enemy</h1>
+<h2 id="91-create-a-basic-enemy">9.1 Create A Basic enemy</h2>
+<ul>
+<li>They will act on each turn of the game.</li>
+<li>They are essentially a <strong>CellObject</strong> that moves, so they act like walls in the sense that they stop the player character from entering the cell where they are, and receiving damage can destroy them when their hit points reach <strong>0</strong>.</li>
+<li>They can damage the player character (reducing their food amount by <strong>1</strong>) if the player character is adjacent to them when the turn happens.</li>
+<li>If the player character is not next to them when the turn happens, the enemies will move one cell closer to them.</li>
+<li>Your <strong>Enemy</strong> script inherits from <strong>CellObject</strong>.</li>
+<li>Enemies will need a notification when a turn happens. Check how you did this when reducing the food on every turn. Don’t forget to add an <strong>OnDestroy</strong> function to the enemies to remove the callback! Otherwise the callback will try to still notify the destroyed enemy that a turn happened.</li>
+<li>When a turn happens, enemies check where the player character is. If they are next to them, they damage the player character (remove some food points), but if they are not next to the player character, they move one cell closer.</li>
+<li>When enemies move, because they are a <strong>CellObject</strong>, they need to remove themselves from the cell they move from and add themselves to the cell they move to.</li>
+<li>Start with creating the GameObject with just the idle animation of the enemy. This will be the base of all your work.</li>
+<li>Create your <strong>Enemy</strong> script as a subclass of <strong>CellObject</strong>, but leave all its functions empty for now.</li>
+<li>Create a prefab from that GameObject and try to spawn that Enemy prefab into the <strong>BoardManager</strong> (remember they are <strong>CellObjects</strong>!)</li>
+<li>Now you can test that your enemy appears in the game when you play! You might already have a bug to fix as your enemy might not appear. Check your <strong>Hierarchy</strong> window and, if it’s in the <strong>Hierarchy</strong> window but not visible in the <strong>Scene</strong> view, try to remember what you had to make the player character and food sprites appear on top of the tilemap.</li>
+<li>Once you confirm your enemy appears in the game, it’s time to start coding it! Modify your <strong>Enemy</strong> script so that it stops the player character from entering its cell, and instead takes damage (you need to add health tracking to the <strong>Enemy</strong> script) and gets destroyed once its hit points reach <strong>0</strong>. In short, make it exactly like a <strong>WallObject</strong>.</li>
+<li>Once this is confirmed to work, make the enemy move towards the player character each turn! You need to find which cell the enemy needs to move to get closer to the player. This is probably the hardest part. Try different codes to do this.</li>
+<li>Now test to see if the enemy is trying to get closer to the player character. At this step, you might encounter a bug where the enemy gets under the player. Don’t forget to stop the enemy trying to get to the player character if it’s adjacent from it: the enemy should never try to enter the player character’s cell!</li>
+</ul>
+<h3 id="enemy"><strong>Enemy</strong></h3>
+<pre><code class="language-csharp">public class Enemy:CellObject
+{
+public int Health=3;
+private int m_CurrentHealth;
+private void Awake()
+{      
+GameManager.Instance.TurnManager.OnTick+= TurnHappened;
+}
+private void OnDestroy()
+{       
+GameManager.Instance.TurnManager.OnTick-= TurnHappened;
+}
+public override void Init(Vector2Int coord)
+{
+base.Init(coord);      
+m_CurrentHealth= Health;
+}
+public override bool PlayerWantsToEnter()
+{       
+m_CurrentHealth-=1;
+if(m_CurrentHealth&lt;=0)
+{
+Destroy(gameObject);
+}
+return false;
+}
+bool MoveTo(Vector2Int coord)
+{
+var board= GameManager.Instance.BoardManager;
+var targetCell=  board.GetCellData(coord);
+if(targetCell==null||!targetCell.Passable|| targetCell.ContainedObject!=null)
+{
+return false;
+}
+//remove enemy from current cell
+var currentCell= board.GetCellData(m_Cell);      
+currentCell.ContainedObject=null;
+//add it to the next cell      
+targetCell.ContainedObject=this;      
+m_Cell= coord;      
+transform.position= board.CellToWorld(coord);
+return true;
+}
+void TurnHappened()
+{
+//We added a public property that return the player current cell!
+var playerCell= GameManager.Instance.PlayerController.Cell;
+int xDist= playerCell.x- m_Cell.x; 
+int yDist= playerCell.y- m_Cell.y;
+int absXDist= Mathf.Abs(xDist);
+int absYDist= Mathf.Abs(yDist);
+if((xDist==0&amp;&amp; absYDist==1)||(yDist==0&amp;&amp; absXDist==1))
+{
+//we are adjacent to the player, attack!          
+GameManager.Instance.ChangeFood(3);
+}
+else if
+{
+(absXDist&gt; absYDist)
+{
+if(!TryMoveInX(xDist))
+{
+//if our move was not successful (so no move and not attack)
+//we try to move along Y
+TryMoveInY(yDist);
+}
+}
+else if
+{
+(!TryMoveInY(yDist))
+{
+TryMoveInX(xDist);
+}
+}
+}
+}
+bool TryMoveInX(int xDist)
+{
+//try to get closer in x
+//player to our right
+if(xDist&gt;0)
+{
+return MoveTo(m_Cell+ Vector2Int.right);
+}
+//player to our left
+return MoveTo(m_Cell+ Vector2Int.left);
+}
+bool TryMoveInY(int yDist)
+{
+//try to get closer in y
+//player on top
+if(yDist&gt;0){returnMoveTo(m_Cell+ Vector2Int.up);
+}
+//player below
+return MoveTo(m_Cell+ Vector2Int.down);
+}
+}
+</code></pre>
+<h1 id="conclusion">Conclusion</h1>
+<p>This workshop introduced the fundamentals of building a 2D roguelike game in Unity. Participants learned how to structure a project, generate a dynamic game board, implement player movement, design a turn-based system, and integrate basic resource management with UI feedback.</p>
+<p>By the end, attendees gained practical experience in organizing game logic, writing core gameplay scripts, and connecting mechanics with visual elements. The foundation built here can be extended into more advanced systems such as enemies, procedural generation improvements, combat mechanics, and polished UI/UX.</p>
+<p>This marks the starting point for developing complete, scalable game projects in Unity.</p>
+<hr />
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": [], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

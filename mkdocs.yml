@@ -1,0 +1,47 @@
+
+site_name: GAME DEV WORKSHOP DOCS
+nav:
+  - Home: index.md
+theme:
+  name: material
+  logo: images/logo.png  # Place your logo in docs/images/
+  favicon: images/favicon.ico  # Place your favicon in docs/images/
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: pink
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: pink
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  font:
+    text: Roboto
+    code: Roboto Mono
+  features:
+    - navigation.tabs
+    - navigation.top
+    - search.highlight
+    - search.suggest
+    - toc.integrate
+  density: compact
+  extra_css:
+    - stylesheets/compact.css
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/yourusername
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/yourusername
+markdown_extensions:
+  - admonition
+  - codehilite
+  - footnotes
+  - meta
+  - toc:
+      permalink: true
+
