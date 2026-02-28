@@ -1,0 +1,22 @@
+/* Compact layout tweaks for Material theme */
+.md-typeset {
+  line-height: 1.4;
+  font-size: 0.97em;
+}
+.md-content {
+  padding: 1.5rem 1rem;
+}
+.md-main__inner {
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+.md-typeset h1, .md-typeset h2, .md-typeset h3 {
+  margin-top: 1.2em;
+  margin-bottom: 0.5em;
+}
+.md-typeset p {
+  margin-bottom: 0.7em;
+}
