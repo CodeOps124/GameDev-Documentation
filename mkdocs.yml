@@ -2,6 +2,16 @@
 site_name: GAME DEV WORKSHOP DOCS
 nav:
   - Home: index.md
+  - Introduction: 1-Introduction.md
+  - Creating the Game: 2-Creating the Game.md
+  - Character Development: 3-Character Development.md
+  - Turn System: 4-Turn System.md
+  - Health System: 5-Health System.md
+  - Adding Obstacles: 6-Adding Obstacles.md
+  - Beating the Game: 7-Beating the game.md
+  - Animation: 8-Animation.md
+  - Adding an Enemy: 9-Adding an enemy.md
+  - Conclusion: Conclusion.md
 theme:
   name: material
   logo: images/logo.png  # Place your logo in docs/images/
