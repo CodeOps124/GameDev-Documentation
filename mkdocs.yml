@@ -40,6 +40,8 @@ theme:
   features:
     - navigation.tabs
     - navigation.top
+    - navigation.expand
+    - navigation.sections
     - navigation.footer
     - navigation.sections
     - search.highlight
