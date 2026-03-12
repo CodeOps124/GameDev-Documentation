@@ -1,9 +1,15 @@
 TABLE OF CONTENTS:
 
 1. Introduction 
+<<<<<<< HEAD
    1.1 What you will be learning 
    1.2 Preparing for the project
    1.3 Importing Assets
+=======
+    1.1 What you will be learning ?
+    1.2 Preparing for the project
+    1.3 Importing Assets
+>>>>>>> e592363487ff051c138b586ae465f49c527cfb46
 
 2. Creating the game
     2.1 Creating the game board
@@ -45,7 +51,11 @@ TABLE OF CONTENTS:
 
 9. Adding an enemy
     9.1 Creating an Enemy
+<<<<<<< HEAD
 
+=======
+   
+>>>>>>> e592363487ff051c138b586ae465f49c527cfb46
 10. Conclusion
 
    
