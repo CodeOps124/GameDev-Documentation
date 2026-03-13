@@ -1,4 +1,3 @@
-
 site_name: GAME DEV WORKSHOP DOCS
 nav:
   - Home: index.md
@@ -18,9 +17,6 @@ theme:
   name: material
   logo: images/logo.png  # Place your logo in docs/images/
   favicon: images/favicon.ico  # Place your favicon in docs/images/
-  extra_css: 
-    - stylesheets/compact.css  # Custom CSS for compact design  
-  
   palette:
     - scheme: default
       primary: indigo
@@ -54,6 +50,8 @@ extra:
       link: https://github.com/yourusername
     - icon: fontawesome/brands/twitter
       link: https://twitter.com/yourusername
+extra_css:
+  - stylesheets/compact.css
 markdown_extensions:
   - admonition
   - codehilite
@@ -63,4 +61,3 @@ markdown_extensions:
   - pymdownx.superfences  
   - toc:
       permalink: true
-
