@@ -14,9 +14,9 @@ By the end of this tutorial. You would have learnt to create a 2D roguelike game
 
 In this tutorial, you’ll start by creating the Unity project for this game. You’ll then import the assets that will be used throughout the tutorial, set up all the settings for rendering, and set up Unity Version Control. Lastly, before you start creating, you’ll organize ideas about the game to create a plan on how to make it.
 
-## Session: 1
+## Part 1
 Objective:
-Attendees will learn how to design and build a 2D roguelike game. Attendees will learn to prioritise and organise tasks, learn some programming concepts, and learn how to use pixel art in unity.
+You will learn how to design and build a 2D roguelike game. You will learn to prioritise and organise tasks, learn some programming concepts, and learn how to use pixel art in unity.
 
 Duration: 3 Hours
 
@@ -24,7 +24,7 @@ Duration: 3 Hours
  Short note on unity- What is unity, basic functions (game view, scene view,
 components, inspector, projects)
 2. Overview
-What a roguelike game is and an overview of what you will be creating. You will learn to create a 2D roguelike project, how to import assets and Architecting.
+What a roguelike game. You will learn to create a 2D roguelike project, how to import assets and Architecting.
 3. Creating the environment
 You will learn to create basic game board that randomly generates tiles on start.
 • A border for the game board that “traps” the player character in the confines of the game

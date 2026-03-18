@@ -82,7 +82,7 @@ public class BoardManager : MonoBehaviour
 }
 ```
 
-5.  After completing your script, make sure to save it to compile the changes so they are visible in the Editor.
+**5.**  After completing your script, make sure to save it to compile the changes so they are visible in the Editor.
 
 **6.**  Select the **BoardManager** GameObject. In the **Inspector** window, set the **width** and **height** variables of the Board Manager script component to **8**.
 
