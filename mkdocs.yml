@@ -6,13 +6,13 @@ nav:
       - Content Page: Content Page.md
       - Unity Installation: Unity Installation.md
 
-  - Session 1:
+  - Part 1:
       - Introduction: 1-Introduction.md
       - Creating the Game: 2-Creating the Game.md
       - Character Development: 3-Character Development.md
       - Turn System: 4-Turn System.md
 
-  - Session 2:
+  - Part 2:
       - Health System: 5-Health System.md
       - Adding Obstacles: 6-Adding Obstacles.md
       - Beating the Game: 7-Beating the game.md
