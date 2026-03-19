@@ -32,6 +32,7 @@ What a roguelike game. You will learn to create a 2D roguelike project, how to i
 ### 3. Creating the environment:
 
 You will learn to create basic game board that randomly generates tiles on start.
+
 - A border for the game board that “traps” the player character in the confines of the game
 board.
 - Use Unity Version Control to check in changes to your projects’ repository so you don’t lose any progress and can revert the state of your game to a previous one.
@@ -39,6 +40,7 @@ board.
 ### 4. Adding player characters:
 
  You will learn to:
+
 - Created a Player Character Game Object using one of the provided assets.
 - Ensured that the Player Character Game Object is rendered in the correct level, so it is
 visible on the board.
@@ -49,6 +51,7 @@ controlled by user inputs.
 
 You will learn to add a turn system. This game is a turn-based game, which means it needs
 a way to manage those turns.
+
 - Created a Turn Manager script that will track every time the player character moves and
 count that as one turn.
 - Reworked the initialization code for the game to accommodate the new system.
@@ -58,6 +61,7 @@ count that as one turn.
 Now the game can count turns, You can start introducing gameplay elements like
 resource management. By the end of this , You would have learnt
 the following:
+
 - Added a food resource that will spawn randomly on the game board at start and that
 the player character can collect.
 - Used the UI Builder window to create an in game label that shows the amount of food the
@@ -71,6 +75,7 @@ player currently has.
 To make the game more challenging, some obstacles will be added to make navigating the
 game board less straightforward. By the end of this tutorial, you would have learnt
 the following:
+
 - Create wall prefabs.
 - Code the functionality to have a random number of Wall Game Objects spawn on the
 game board when the game starts.
@@ -80,6 +85,7 @@ game board when the game starts.
 ### 8. Animation
 
 To increase the polish of a game, you should add animations to your player character for different actions: an idle animation, a walk animation, and an attack animation. By the end of this tutorial, you would have done the following:
+
 - Added an Animator component to the Player Character Game Object to facilitate animation.
 - Used the Animation window to create keyframes for the animation using sprites from the Sprite Sheet.
 - Used the Animator window to link the Animation states for the player character so that each animation flows fluidly from one to another.
@@ -87,5 +93,6 @@ To increase the polish of a game, you should add animations to your player chara
 ### 9. Adding an NPC character
 
 Nearing the end of the game. You have added all the basic elements of a traditional roguelike except one: an enemy character whose purpose is to increase the game’s difficulty. Adding an enemy to the game will involve everything the attendees have learnt so far. By the end of this tutorial, you would have done the following:
+
 - Added an Enemy Game Object to the game.
 - Coded the Enemy Game Object’s functionality so that it seeks out, moves toward, and attacks the player character on its turn.
