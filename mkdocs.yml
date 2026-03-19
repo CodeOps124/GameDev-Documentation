@@ -2,7 +2,7 @@ site_name: GAME DEV WORKSHOP DOCS
 
 nav:
   - Home:
-      - Home: Overview.md
+      - Overview: Overview.md
       - Content Page: Content Page.md
       - Unity Installation: Unity Installation.md
 

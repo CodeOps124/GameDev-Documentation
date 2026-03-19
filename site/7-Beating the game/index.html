@@ -9,7 +9,7 @@
       
       
       
-        <link rel="prev" href="../6-Adding%20Obstacles/">
+        <link rel="prev" href="../6-Add%20Obstacles/">
       
       
         <link rel="next" href="../8-Animation/">
@@ -212,7 +212,7 @@
     
     
       <li class="md-tabs__item">
-        <a href=".." class="md-tabs__link">
+        <a href="../Overview/" class="md-tabs__link">
           
   
   
@@ -236,7 +236,7 @@
           
   
   
-  Part 1
+  Day 1
 
         </a>
       </li>
@@ -258,7 +258,7 @@
           
   
   
-  Part 2
+  Day 2
 
         </a>
       </li>
@@ -361,7 +361,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../Overview/" class="md-nav__link">
         
   
   
@@ -477,7 +477,7 @@
   <span class="md-ellipsis">
     
   
-    Part 1
+    Day 1
   
 
     
@@ -493,7 +493,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Part 1
+    Day 1
   
 
           </label>
@@ -653,7 +653,7 @@
   <span class="md-ellipsis">
     
   
-    Part 2
+    Day 2
   
 
     
@@ -669,7 +669,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Part 2
+    Day 2
   
 
           </label>
@@ -710,7 +710,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../6-Adding%20Obstacles/" class="md-nav__link">
+      <a href="../6-Add%20Obstacles/" class="md-nav__link">
         
   
   
@@ -806,10 +806,9 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="7.1 Finishing A level">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
   <a href="#72-generating-a-new-level" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -818,7 +817,8 @@
     </span>
   </a>
   
-</li>
+    <nav class="md-nav" aria-label="7.2 Generating a new level">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#boardmanager" class="md-nav__link">
@@ -1107,7 +1107,7 @@
 <span class="p">}</span>
 </code></pre></div>
 <p><img alt="" src="https://connect-mediagw.unity.com/h1/20240927/learn/images/9d46d683-a30d-4fc9-88f6-9827dbe97bc2_game-view-exit.png" /></p>
-<h3 id="72-generating-a-new-level"><strong>7.2 Generating a new level</strong><a class="headerlink" href="#72-generating-a-new-level" title="Permanent link">&para;</a></h3>
+<h2 id="72-generating-a-new-level">7.2 Generating a new level<a class="headerlink" href="#72-generating-a-new-level" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>BoardManager</strong> will need a new function that cleans the current level. This means going over every cell, removing their tile from the tilemap, deleting the data saved inside them and destroying their CellObject.</li>
 <li><strong>GameManager</strong> will need a <strong>NewLevel</strong> function that will clean the current board, create a new one, and spawn the player character at the start of this new board.</li>
@@ -1170,11 +1170,11 @@
 </code></pre></div>
 <h2 id="73-game-over">7.3 Game Over<a class="headerlink" href="#73-game-over" title="Permanent link">&para;</a></h2>
 <p>For your game to have an ending, let’s add a <strong>Game Over</strong> state to the game. This will occur when the food count reaches 0. After that, this is what needs to happen:</p>
-<ol>
+<ul>
 <li>The UI text display will need to change to a GameOver message that shows how many levels the player survived before running out of food.</li>
 <li>The game will need to be set to a <strong>Game</strong> <strong>Over</strong> state that disables reading input so the user can’t move the player character anymore.</li>
 <li>The whole game will need to restart at level 1 when a certain key is pressed to create a game loop.</li>
-</ol>
+</ul>
 <p>Let’s start with the UI game over message, which will consist of a semi transparent background that darkens the screen and a text in the middle that shows the number of completed levels:</p>
 <p><strong>1.</strong> In the <strong>UI</strong> folder of the <strong>Project</strong> window, double click the uxml document <strong>GameUI</strong> to open the <strong>UI builder</strong> window.</p>
 <p><strong>2.</strong> In the <strong>Library</strong> window, in the <strong>Containers</strong> section, click and drag a <strong>VisualElement</strong> into the <strong>Hierarchy</strong> window and rename it “GameOverPanel”.</p>
@@ -1220,10 +1220,10 @@
 <span class="p">}</span>
 </code></pre></div>
 <h3 id="game-over-state"><strong>Game Over state</strong><a class="headerlink" href="#game-over-state" title="Permanent link">&para;</a></h3>
-<ol>
+<ul>
 <li>Create a bool variable in the <strong>PlayerController</strong> that stores whether the player character is in a <strong>Game</strong> <strong>Over</strong> state or not.</li>
 <li>Early exit the <strong>Update</strong> function to disable input handling. Make the <strong>GameManager</strong> have a reference to the <strong>Player Controller</strong> script so it can easily call functions on it.</li>
-</ol>
+</ul>
 <h3 id="playercontroller"><strong>PlayerController</strong><a class="headerlink" href="#playercontroller" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="nn">UnityEngine</span><span class="p">;</span>
 <span class="k">using</span><span class="w"> </span><span class="nn">UnityEngine.InputSystem</span><span class="p">;</span>
@@ -1266,13 +1266,13 @@
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<ol>
+<ul>
 <li>Move the part of the <strong>Start</strong> function in the <strong>GameManager</strong> that handles initializing the game into a new function called <strong>StartNewGame</strong>.</li>
-</ol>
+</ul>
 <p>Things like getting references to UI elements or creating new objects like the <strong>TurnManager</strong> only needs to happen once when the game is launched, not every new game, and can be left in the <strong>Start</strong> function.</p>
-<ol>
+<ul>
 <li>The <strong>PlayerController</strong> needs to check if the <strong>Enter</strong> key is pressed only during game over, and if it's pressed it starts a new game.</li>
-</ol>
+</ul>
 <h3 id="gamemanager_2"><strong>GameManager</strong><a class="headerlink" href="#gamemanager_2" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><span class="k">void</span><span class="w"> </span><span class="nf">Start</span><span class="p">()</span>
 <span class="p">{</span><span class="w">   </span>
@@ -1363,7 +1363,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../6-Adding%20Obstacles/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Adding Obstacles">
+          <a href="../6-Add%20Obstacles/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Adding Obstacles">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>

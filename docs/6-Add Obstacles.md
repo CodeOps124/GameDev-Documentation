@@ -1,6 +1,6 @@
 # 6. Add Obstacles
 
-## 6.1 Add Obstacles
+## 6.1 Adding a Wall(CellObject)
 
 There are a couple of sprites that you can use for walls:
 
