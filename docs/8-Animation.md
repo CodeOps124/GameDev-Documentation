@@ -1,4 +1,4 @@
-## 8. Animation
+# 8. Animation
 
 To add some life into the game, let’s add some animations to it! Animations can not only increase player experience by adding visual interest to your game, but they also help bring a higher level of polish and professionalism to applications.
 

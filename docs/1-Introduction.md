@@ -1,14 +1,4 @@
-## 1.1 What you will be learning ?
-
-By the end of this workshop. You would have learnt to create a 2D roguelike game. A roguelike is a traditional game genre that has taken many forms over the years, but it usually shares some common elements, such as the following:
-
-- It’s procedurally generated, meaning the levels in the game aren't created by a human and thus always the same, but instead they’re assembled randomly by the code, so every time the game is played, the levels are different.
-- The game is played on a grid, meaning all entities (player and enemies) move from cell to cell on that grid.
-- The game is turn-based, meaning nothing will happen until the player takes an action (move, attack, etc.), which gives players the chance to think strategically between each action.
-
-In this tutorial, you’ll start by creating the Unity project for this game. You’ll then import the assets that will be used throughout the tutorial, set up all the settings for rendering, and set up Unity Version Control. Lastly, before you start creating, you’ll organize ideas about the game to create a plan on how to make it.
-
-## 1.2 Preparing for the project
+## 1.1 Preparing for the project
 
 To create your project and get it ready to work on, follow these instructions:
 
@@ -37,7 +27,7 @@ This will allow you to use Unity Cloud and Unity Version Control in your project
 
 Your project is now set up for you to start working on it.
 
-## 1.3 Importing Assets
+## 1.2 Importing Assets
 
 - Download [the asset package](https://unity-connect-prd.storage.googleapis.com/20241025/13b51e19-dc52-4982-b67a-fdfb35c7a3b8/Roguelike2DTutorialAssets.unitypackege.zip), unzip the file and drag and drop it into the **Assets** folder of the **Project** window.
 - The **Import Unity Package** window will open, listing all the assets this package will import into your project.

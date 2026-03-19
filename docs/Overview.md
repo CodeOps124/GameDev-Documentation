@@ -1,10 +1,10 @@
-# Game Development 101
+# Game Development 101: 2-Day DIY Kit 
 
 # Overview
 
 Unity is a cross-platform game engine used to develop 2D, 3D, AR, and VR applications . It abstracts low-level systems (rendering, physics, memory, input) and provides a component-based framework for building interactive applications using C#.
 
-## What you will be learning ?
+## Key Learning Outcomes
 
 By the end of this tutorial. You would have learnt to create a 2D roguelike game. A roguelike is a traditional game genre that has taken many forms over the years, but it usually shares some common elements, such as the following:
 
@@ -14,7 +14,7 @@ By the end of this tutorial. You would have learnt to create a 2D roguelike game
 
 In this tutorial, you’ll start by creating the Unity project for this game. You’ll then import the assets that will be used throughout the tutorial, set up all the settings for rendering, and set up Unity Version Control. Lastly, before you start creating, you’ll organize ideas about the game to create a plan on how to make it.
 
-## Part 1
+## Day 1
 Objective:
 You will learn how to design and build a 2D roguelike game. You will learn to prioritise and organise tasks, learn some programming concepts, and learn how to use pixel art in unity.
 
@@ -53,7 +53,7 @@ the player character can collect.
 player currently has.
 • Coded the functionality to have the food resource decrease with each turn of the game and increase every time the player character collects a food resource.
 
-## Session: 2
+## Day 2
 6. Add gameplay elements(continuation):
 To make the game more challenging, some obstacles will be added to make navigating the
 game board less straightforward. By the end of this tutorial, you would have learnt

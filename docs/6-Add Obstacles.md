@@ -252,7 +252,7 @@ void GenerateWall()
 
 ```
 
-## 6.3 **Damaging walls**
+## 6.3 Damaging walls
 
 Currently when the player bumps into a wall cell, they won't be able to move, but the food counter will decrease as bumping is taken as a turn. So, let’s add the functionality of damaging walls.
 

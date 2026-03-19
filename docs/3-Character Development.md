@@ -49,8 +49,7 @@ public class PlayerController : MonoBehaviour
 }
 
 ```
-
-1. Add the following code into your BoardManager Script:
+Add the following code into your BoardManager Script:
 
 ```csharp
 using UnityEngine;
@@ -105,17 +104,17 @@ The above code does the following things:
 
 - Adds a public member variable (**PlayerController)** to the **BoardManager** so you can assign your **PlayerCharacter** GameObject to it in the **Inspector** window.
 - At the end of the **Start** method, after the board is generated, it calls the **Spawn** method on that **PlayerController** script with a given cell (for example (1,1) the first lower-left cell that is not a wall).
-1. In the Editor, drag the **PlayerCharacter** GameObject from the scene into the **Player** slot on the **BoardManager** script, then enter Play mode.
+- In the Editor, drag the **PlayerCharacter** GameObject from the scene into the **Player** slot on the **BoardManager** script, then enter Play mode.
 
 ![](https://connect-mediagw.unity.com/h1/20241010/learn/images/acd57f69-31e1-48cb-bb66-65a536b0518a_game-view-board.png)
 
-**7.** Select the **PlayerCharacter** GameObject in the **Hierarchy** window and look at the **Scene** view.
+**4.** Select the **PlayerCharacter** GameObject in the **Hierarchy** window and look at the **Scene** view.
 
 You'll see that your player character is in the right place, but the board is rendered above it:
 
 ![image](images/image.png)
 
-**8.** In the **Inspector** window, use the foldout (triangle) to expand the Sprite Renderer component and set the **Order in Layer** property **10**.
+**5.** In the **Inspector** window, use the foldout (triangle) to expand the Sprite Renderer component and set the **Order in Layer** property **10**.
 
 Setting the player character to level 10 gives you space in the future to place objects that should be above the board but under the player character.
 

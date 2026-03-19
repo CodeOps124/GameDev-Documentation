@@ -72,7 +72,7 @@ public class BoardManager : MonoBehaviour
 
 ![](https://connect-mediagw.unity.com/h1/20240927/learn/images/9d46d683-a30d-4fc9-88f6-9827dbe97bc2_game-view-exit.png)
 
-### **7.2 Generating a new level**
+## 7.2 Generating a new level
 
 - **BoardManager** will need a new function that cleans the current level. This means going over every cell, removing their tile from the tilemap, deleting the data saved inside them and destroying their CellObject.
 - **GameManager** will need a **NewLevel** function that will clean the current board, create a new one, and spawn the player character at the start of this new board.
@@ -149,9 +149,9 @@ public override void PlayerEntered()
 
 For your game to have an ending, let’s add a **Game Over** state to the game. This will occur when the food count reaches 0. After that, this is what needs to happen:
 
-1. The UI text display will need to change to a GameOver message that shows how many levels the player survived before running out of food.
-2. The game will need to be set to a **Game** **Over** state that disables reading input so the user can’t move the player character anymore.
-3. The whole game will need to restart at level 1 when a certain key is pressed to create a game loop.
+- The UI text display will need to change to a GameOver message that shows how many levels the player survived before running out of food.
+- The game will need to be set to a **Game** **Over** state that disables reading input so the user can’t move the player character anymore.
+- The whole game will need to restart at level 1 when a certain key is pressed to create a game loop.
 
 Let’s start with the UI game over message, which will consist of a semi transparent background that darkens the screen and a text in the middle that shows the number of completed levels:
 
@@ -226,8 +226,8 @@ public void ChangeFood(int amount)
 
 ### **Game Over state**
 
-1. Create a bool variable in the **PlayerController** that stores whether the player character is in a **Game** **Over** state or not.
-2. Early exit the **Update** function to disable input handling. Make the **GameManager** have a reference to the **Player Controller** script so it can easily call functions on it.
+- Create a bool variable in the **PlayerController** that stores whether the player character is in a **Game** **Over** state or not.
+- Early exit the **Update** function to disable input handling. Make the **GameManager** have a reference to the **Player Controller** script so it can easily call functions on it.
 
 ### **PlayerController**
 
@@ -279,11 +279,11 @@ public void ChangeFood(int amount)
 
 ```
 
-1. Move the part of the **Start** function in the **GameManager** that handles initializing the game into a new function called **StartNewGame**.
+- Move the part of the **Start** function in the **GameManager** that handles initializing the game into a new function called **StartNewGame**.
 
 Things like getting references to UI elements or creating new objects like the **TurnManager** only needs to happen once when the game is launched, not every new game, and can be left in the **Start** function.
 
-1. The **PlayerController** needs to check if the **Enter** key is pressed only during game over, and if it's pressed it starts a new game.
+- The **PlayerController** needs to check if the **Enter** key is pressed only during game over, and if it's pressed it starts a new game.
 
 ### **GameManager**
 
