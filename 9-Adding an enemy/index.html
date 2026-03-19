@@ -23,7 +23,7 @@
     
     
       
-        <title>Adding an Enemy - GAME DEV WORKSHOP DOCS</title>
+        <title>Adding an Enemy - GAME DEV 101</title>
       
     
     
@@ -90,7 +90,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="GAME DEV WORKSHOP DOCS" class="md-header__button md-logo" aria-label="GAME DEV WORKSHOP DOCS" data-md-component="logo">
+    <a href=".." title="GAME DEV 101" class="md-header__button md-logo" aria-label="GAME DEV 101" data-md-component="logo">
       
   <img src="../images/logo.png" alt="logo">
 
@@ -103,7 +103,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            GAME DEV WORKSHOP DOCS
+            GAME DEV 101
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -290,12 +290,12 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="GAME DEV WORKSHOP DOCS" class="md-nav__button md-logo" aria-label="GAME DEV WORKSHOP DOCS" data-md-component="logo">
+    <a href=".." title="GAME DEV 101" class="md-nav__button md-logo" aria-label="GAME DEV 101" data-md-component="logo">
       
   <img src="../images/logo.png" alt="logo">
 
     </a>
-    GAME DEV WORKSHOP DOCS
+    GAME DEV 101
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -944,23 +944,21 @@
 
 <h1 id="9-adding-an-enemy">9. Adding an enemy<a class="headerlink" href="#9-adding-an-enemy" title="Permanent link">&para;</a></h1>
 <h2 id="91-create-a-basic-enemy">9.1 Create A Basic enemy<a class="headerlink" href="#91-create-a-basic-enemy" title="Permanent link">&para;</a></h2>
-<ul>
-<li>They will act on each turn of the game.</li>
-<li>They are essentially a <strong>CellObject</strong> that moves, so they act like walls in the sense that they stop the player character from entering the cell where they are, and receiving damage can destroy them when their hit points reach <strong>0</strong>.</li>
-<li>They can damage the player character (reducing their food amount by <strong>1</strong>) if the player character is adjacent to them when the turn happens.</li>
-<li>If the player character is not next to them when the turn happens, the enemies will move one cell closer to them.</li>
-<li>Your <strong>Enemy</strong> script inherits from <strong>CellObject</strong>.</li>
-<li>Enemies will need a notification when a turn happens. Check how you did this when reducing the food on every turn. Don’t forget to add an <strong>OnDestroy</strong> function to the enemies to remove the callback! Otherwise the callback will try to still notify the destroyed enemy that a turn happened.</li>
-<li>When a turn happens, enemies check where the player character is. If they are next to them, they damage the player character (remove some food points), but if they are not next to the player character, they move one cell closer.</li>
-<li>When enemies move, because they are a <strong>CellObject</strong>, they need to remove themselves from the cell they move from and add themselves to the cell they move to.</li>
-<li>Start with creating the GameObject with just the idle animation of the enemy. This will be the base of all your work.</li>
-<li>Create your <strong>Enemy</strong> script as a subclass of <strong>CellObject</strong>, but leave all its functions empty for now.</li>
-<li>Create a prefab from that GameObject and try to spawn that Enemy prefab into the <strong>BoardManager</strong> (remember they are <strong>CellObjects</strong>!)</li>
-<li>Now you can test that your enemy appears in the game when you play! You might already have a bug to fix as your enemy might not appear. Check your <strong>Hierarchy</strong> window and, if it’s in the <strong>Hierarchy</strong> window but not visible in the <strong>Scene</strong> view, try to remember what you had to make the player character and food sprites appear on top of the tilemap.</li>
-<li>Once you confirm your enemy appears in the game, it’s time to start coding it! Modify your <strong>Enemy</strong> script so that it stops the player character from entering its cell, and instead takes damage (you need to add health tracking to the <strong>Enemy</strong> script) and gets destroyed once its hit points reach <strong>0</strong>. In short, make it exactly like a <strong>WallObject</strong>.</li>
-<li>Once this is confirmed to work, make the enemy move towards the player character each turn! You need to find which cell the enemy needs to move to get closer to the player. This is probably the hardest part. Try different codes to do this.</li>
-<li>Now test to see if the enemy is trying to get closer to the player character. At this step, you might encounter a bug where the enemy gets under the player. Don’t forget to stop the enemy trying to get to the player character if it’s adjacent from it: the enemy should never try to enter the player character’s cell!</li>
-</ul>
+<p><strong>1.</strong> They will act on each turn of the game.</p>
+<p><strong>2.</strong> They are essentially a <strong>CellObject</strong> that moves, so they act like walls in the sense that they stop the player character from entering the cell where they are, and receiving damage can destroy them when their hit points reach <strong>0</strong>.</p>
+<p><strong>3.</strong> They can damage the player character (reducing their food amount by <strong>1</strong>) if the player character is adjacent to them when the turn happens.</p>
+<p><strong>4.</strong> If the player character is not next to them when the turn happens, the enemies will move one cell closer to them.</p>
+<p><strong>5.</strong> Your <strong>Enemy</strong> script inherits from <strong>CellObject</strong>.</p>
+<p><strong>6.</strong> Enemies will need a notification when a turn happens. Check how you did this when reducing the food on every turn. Don’t forget to add an <strong>OnDestroy</strong> function to the enemies to remove the callback! Otherwise the callback will try to still notify the destroyed enemy that a turn happened.
+<strong>7.</strong> When a turn happens, enemies check where the player character is. If they are next to them, they damage the player character (remove some food points), but if they are not next to the player character, they move one cell closer.</p>
+<p><strong>8.</strong> When enemies move, because they are a <strong>CellObject</strong>, they need to remove themselves from the cell they move from and add themselves to the cell they move to.</p>
+<p><strong>9.</strong> Start with creating the GameObject with just the idle animation of the enemy. This will be the base of all your work.</p>
+<p><strong>10.</strong> Create your <strong>Enemy</strong> script as a subclass of <strong>CellObject</strong>, but leave all its functions empty for now.</p>
+<p><strong>11.</strong> Create a prefab from that GameObject and try to spawn that Enemy prefab into the <strong>BoardManager</strong> (remember they are <strong>CellObjects</strong>!)</p>
+<p><strong>12.</strong> Now you can test that your enemy appears in the game when you play! You might already have a bug to fix as your enemy might not appear. Check your <strong>Hierarchy</strong> window and, if it’s in the <strong>Hierarchy</strong> window but not visible in the <strong>Scene</strong> view, try to remember what you had to make the player character and food sprites appear on top of the tilemap.</p>
+<p><strong>13.</strong> Once you confirm your enemy appears in the game, it’s time to start coding it! Modify your <strong>Enemy</strong> script so that it stops the player character from entering its cell, and instead takes damage (you need to add health tracking to the <strong>Enemy</strong> script) and gets destroyed once its hit points reach <strong>0</strong>. In short, make it exactly like a <strong>WallObject</strong>.</p>
+<p><strong>14.</strong> Once this is confirmed to work, make the enemy move towards the player character each turn! You need to find which cell the enemy needs to move to get closer to the player. This is probably the hardest part. Try different codes to do this.</p>
+<p><strong>15.</strong> Now test to see if the enemy is trying to get closer to the player character. At this step, you might encounter a bug where the enemy gets under the player. Don’t forget to stop the enemy trying to get to the player character if it’s adjacent from it: the enemy should never try to enter the player character’s cell!</p>
 <h3 id="enemy"><strong>Enemy</strong><a class="headerlink" href="#enemy" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Enemy</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">CellObject</span>
 <span class="p">{</span>
