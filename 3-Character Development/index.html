@@ -212,7 +212,7 @@
     
     
       <li class="md-tabs__item">
-        <a href=".." class="md-tabs__link">
+        <a href="../Overview/" class="md-tabs__link">
           
   
   
@@ -238,7 +238,7 @@
           
   
   
-  Part 1
+  Day 1
 
         </a>
       </li>
@@ -258,7 +258,7 @@
           
   
   
-  Part 2
+  Day 2
 
         </a>
       </li>
@@ -361,7 +361,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../Overview/" class="md-nav__link">
         
   
   
@@ -480,7 +480,7 @@
   <span class="md-ellipsis">
     
   
-    Part 1
+    Day 1
   
 
     
@@ -496,7 +496,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Part 1
+    Day 1
   
 
           </label>
@@ -733,7 +733,7 @@
   <span class="md-ellipsis">
     
   
-    Part 2
+    Day 2
   
 
     
@@ -749,7 +749,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Part 2
+    Day 2
   
 
           </label>
@@ -790,7 +790,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../6-Adding%20Obstacles/" class="md-nav__link">
+      <a href="../6-Add%20Obstacles/" class="md-nav__link">
         
   
   
@@ -969,7 +969,7 @@
 <li>A private variable of type <strong>Vector2Int</strong> that saves the current cell the player is on.</li>
 <li>A public method called “Spawn” that saves the BoardManager that the player is placed in and the index where it is currently.</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="nn">UnityEngine</span><span class="p">;</span>
+<p><div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="nn">UnityEngine</span><span class="p">;</span>
 
 <span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">PlayerController</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">MonoBehaviour</span>
 <span class="p">{</span>
@@ -992,9 +992,7 @@
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<ol>
-<li>Add the following code into your BoardManager Script:</li>
-</ol>
+Add the following code into your BoardManager Script:</p>
 <div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="nn">UnityEngine</span><span class="p">;</span>
 <span class="k">using</span><span class="w"> </span><span class="nn">UnityEngine.Tilemaps</span><span class="p">;</span>
 
@@ -1048,10 +1046,10 @@
 <li>In the Editor, drag the <strong>PlayerCharacter</strong> GameObject from the scene into the <strong>Player</strong> slot on the <strong>BoardManager</strong> script, then enter Play mode.</li>
 </ul>
 <p><img alt="" src="https://connect-mediagw.unity.com/h1/20241010/learn/images/acd57f69-31e1-48cb-bb66-65a536b0518a_game-view-board.png" /></p>
-<p><strong>7.</strong> Select the <strong>PlayerCharacter</strong> GameObject in the <strong>Hierarchy</strong> window and look at the <strong>Scene</strong> view.</p>
+<p><strong>4.</strong> Select the <strong>PlayerCharacter</strong> GameObject in the <strong>Hierarchy</strong> window and look at the <strong>Scene</strong> view.</p>
 <p>You'll see that your player character is in the right place, but the board is rendered above it:</p>
 <p><img alt="image" src="../images/image.png" /></p>
-<p><strong>8.</strong> In the <strong>Inspector</strong> window, use the foldout (triangle) to expand the Sprite Renderer component and set the <strong>Order in Layer</strong> property <strong>10</strong>.</p>
+<p><strong>5.</strong> In the <strong>Inspector</strong> window, use the foldout (triangle) to expand the Sprite Renderer component and set the <strong>Order in Layer</strong> property <strong>10</strong>.</p>
 <p>Setting the player character to level 10 gives you space in the future to place objects that should be above the board but under the player character.</p>
 <p><img alt="" src="https://unity-connect-prd.storage.googleapis.com/20250825/learn/images/e9369e0f-0661-4fee-9319-8dca3f951f16_Untitled_53.png" /></p>
 <h2 id="32-moving-player-character">3.2 Moving Player Character<a class="headerlink" href="#32-moving-player-character" title="Permanent link">&para;</a></h2>
