@@ -449,7 +449,7 @@ if (hasMoved)
 
 Virtual methods allow you to change the behavior of a method in a subclass. In this case, **CellData** keeps a reference to a **CellObject**, but this reference can point to an object of any subclass of **CellObject** (in this case, **FoodObject**). When you call **PlayerEntered**, the correct overridden method will be automatically called, based on the **actual** type of the stored object. In this case, because **ContainedObject** will actually point to a **FoodObject**, it is its **PlayerEntered** method that will be called, not the empty **CellObject method**.
 
-# 5.6 **Increasing the food count**
+## 5.6 **Increasing the food count**
 
 So far, the console is only outputting when the player character collects a **Food** GameObject. However, you also need to actually modify the amount of food displayed on the label. This is stored in the **GameManager**, and you have access to it through the **Singleton** instance.
 

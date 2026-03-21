@@ -285,7 +285,7 @@ Things like getting references to UI elements or creating new objects like the 
 
 - The **PlayerController** needs to check if the **Enter** key is pressed only during game over, and if it's pressed it starts a new game.
 
-### **GameManager**
+### **GameManager:Updated**
 
 ```csharp
 void Start()
